@@ -10,7 +10,7 @@ SAGE was designed to be pragmatic so that it can easily integrate into new or ex
 
 [User Guide (PDF download)](https://github.com/USNavalResearchLaboratory/sageframework/blob/master/SAGEUserGuide.pdf)
 
-[Download SAGE Framework v.2.0.28](https://https://sageframework.com/index.html#document-download)
+[Download SAGE Framework v.2.0.28](https://sageframework.com/index.html#document-download)
 
 ![](https://github.com/USNavalResearchLaboratory/sageframework/raw/master/src/_images/introduction_1.png)
 
