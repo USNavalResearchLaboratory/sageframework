@@ -4,4 +4,4 @@
 
 [User Guide (PDF)](https://github.com/USNavalResearchLaboratory/sageframework/blob/master/SAGEUserGuide.pdf)
 
-[Software Download links)](https://github.com/USNavalResearchLaboratory/sageframework/tree/master/src/_downloads)
+[Software Download links](https://github.com/USNavalResearchLaboratory/sageframework/tree/master/src/_downloads)
