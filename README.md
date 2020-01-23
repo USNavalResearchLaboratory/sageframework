@@ -1,4 +1,4 @@
-# Sage Framework 
+![](src/_images/SAGElogo.png) 
 
 SAGE Framework is a multi-agent system designed as an enabeling technology for the research, development, and deployment of agent systems that address wide range of problems including: automated testing of distributed systems, emergent agent configurations, novel agent reasoning algorithms, and distributed simulation. SAGE maintains a small footprint; it is implemented in C++ and uses a highly efficient, and widely used IPC/RPC framework called [Remote Call Framework](www.deltavsoft.com).
 
