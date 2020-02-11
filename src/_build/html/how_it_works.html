@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How It Works &mdash; SAGE User Guide v2.0.28 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SAGE App" href="sage_app.html" />
+    <link rel="prev" title="SAGE Node" href="sage_node.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SAGE User Guide
+          
+
+          
+            
+            <img src="_static/SAGE-icon-72x72.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.28
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How It Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>How It Works</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/how_it_works.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="header-banner-color docutils container">
+<div class="header-banner-text docutils container">
+How It Works</div>
+</div>
+<div class="section" id="how-it-works">
+<h1>How It Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h1>
+<p>SAGE execution is summarized in these following steps:</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#starting-a-sage-server-instance">Starting a SAGE Server instance.</a></li>
+<li><a class="reference internal" href="#connecting-sage-node-instance-to-sage-server">Connecting SAGE Node instance to SAGE Server.</a></li>
+<li><a class="reference internal" href="#building-an-agent-network">Building an agent network.</a></li>
+<li><a class="reference internal" href="#distributing-behaviors-to-target-nodes">Distributing Behaviors to target Nodes.</a></li>
+<li><a class="reference internal" href="#activating-agents">Activating agents.</a></li>
+<li><a class="reference internal" href="#creating-a-test-case-that-runs-a-behavior">Creating a test case that runs a behavior.</a></li>
+<li><a class="reference internal" href="#logging-the-events-collecting-the-results">Logging the events, collecting the results.</a></li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/sage_architecture.png" src="_images/sage_architecture.png" />
+</div>
+<p>An instance of a SAGE runtime consists of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>ONE</em> instance of a SAGE Server</li>
+<li><em>ONE or MORE</em> SAGE Node instances running on either the Server computer or on remote computers with network connectivity to the Server Computer.</li>
+<li>In addition, a SAGE Node instance may have <em>MULTIPLE</em> SAGE Agents which may each have <em>MULTIPLE</em> Behaviors.</li>
+</ul>
+</div></blockquote>
+<p id="starting-a-sage-server-instance"><strong>1. Starting a SAGE Server instance</strong></p>
+<p>To begin automating your environment, you must first stand-up a single SAGE Server instance.</p>
+<p>The SAGE Server is the central component for your automation. It serves as a single-point of access for managing your Agent network, by handling communication and code (Behavior) distribution.</p>
+<p id="connecting-sage-node-instance-to-sage-server"><strong>2. Connecting SAGE Nodes</strong></p>
+<p>The next step would be to stand-up your Node instances on all computers that are expected to execute any automation. This includes any local and remote machines.</p>
+<p>Nodes act as a containers for your Agents. While your Agents execute your automation code, the Nodes can be viewed as conductors for Agents. This means that the Server has fewer components to communicate with as it bypasses the need to have to communicate with an Agent directly.</p>
+<p>This also means that as a user, you will not have to manually configure multiple Agents across multiple machines. Instead, you can stand up a single Node and later automate the creation and deletion of Agents tied to that Node.</p>
+<p>This architecture was designed with scalability in mind.</p>
+<p id="building-an-agent-network"><strong>3. Adding agent entities to Nodes</strong></p>
+<p>You can begin populating your Nodes with Agents as soon as your Nodes are initialized. This can be done via manual configuration or it can be automated by either coding it into Behaviors or through an external controller mechanism.</p>
+<p>This gives you the possibility of dynamically building an agent network.</p>
+<p id="distributing-behaviors-to-target-nodes"><strong>4. Managing Behaviors</strong></p>
+<p>Behaviors are only sent to Agents on an as-needed basis. This minimizes overhead and gives Agents the flexibility of learning and unlearning skills on demand.</p>
+<p>All Behaviors are stored in a single repository on the Server machine. When requested, the Behavior module will be sent from the Server to a remote Node. From there, the selected Agent will be granted access to the file.</p>
+<p>This means that you will not have to worry about manually copying code across multiple machines during configuration.</p>
+<p id="activating-agents"><strong>5. Activating agents</strong></p>
+<p>You are ready to activate your Agents once you have established connection between your Server and Nodes and have populated your Server with the necessary Behavior modules.</p>
+<p>Agents must first be activated in order to receive any updates from the network. Thus, an agent that is not activated will not receive incoming messages.</p>
+<p>Upon activation, your Agents may respond reactively or proactively depending on what Behaviors it contains and how those Behaviors are constructed.</p>
+<p>Reactive execution occurs when an Agent perfroms some action upon receiving any incoming message.</p>
+<p>Proactive execution can occur in multiple ways based on how an Agent’s Behaviors are configured.</p>
+<p id="creating-a-test-case-that-runs-a-behavior"><strong>6. Running tests</strong></p>
+<p>You can build out a step-by-step test case using the Robot Frameworks integration into SAGE Framework as a controller mechanism.</p>
+<p>This integration allows you to send messages from the Controller. This message will propagate through the Server to the Node to instruct an Agent.</p>
+<p>Upon receiving messages, your Agents will begin executing their coded automation abilities.</p>
+<p id="logging-the-events-collecting-the-results"><strong>7. Capturing test results</strong></p>
+<p>During automation, any pertinent information can be captured by Behaviors and reported as an execution result.</p>
+<p>All information, including execution results as well as SAGE log events, are propagated back to the Server to be stored in a single location. This means you will not have to manually check multiple computers to verify your results.</p>
+<p>Instead, users only have to check the logs residing on the Server machine.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sage_app.html" class="btn btn-neutral float-right" title="SAGE App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sage_node.html" class="btn btn-neutral float-left" title="SAGE Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2019 U.S. Naval Research Laboratory, This effort is funded by OPNAV N94 and MARCORSYSCOM
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>

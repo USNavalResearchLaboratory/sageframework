@@ -1,0 +1,739 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Base Class - SAGE Behavior Methods &mdash; SAGE User Guide v2.0.28 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Retrieving Information About Your Agent Network" href="retrieving_information_about_your_agent_network.html" />
+    <link rel="prev" title="Writing a SAGE Behavior" href="writing_a_sage_behavior.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SAGE User Guide
+          
+
+          
+            
+            <img src="_static/SAGE-icon-72x72.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.28
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Base Class - SAGE Behavior Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#addbehavior">addBehavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createagent">createAgent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createstate">createState</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getstate">getState</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getstatenames">getStateNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removeagent">removeAgent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removebehavior">removeBehavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removestate">removeState</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setagentactive">setAgentActive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sendfile">sendFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sendmessage">sendMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setstate">setState</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Base Class - SAGE Behavior Methods</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/base_class_methods.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="header-banner-color docutils container">
+<div class="header-banner-text docutils container">
+Base Class - SAGE Behavior Methods</div>
+</div>
+<div class="section" id="base-class-sage-behavior-methods">
+<h1>Base Class - SAGE Behavior Methods<a class="headerlink" href="#base-class-sage-behavior-methods" title="Permalink to this headline">¶</a></h1>
+<p>The SAGE Behavior base class provides a number of powerful methods that allow Agents to communicate with other Agents, create and remove Agents, add and remove Behaviors from Agents, activate and deactivate Agents, and manage their Agent’s state space.</p>
+<p>This capability in SAGE supports the idea of meta-agents that can reason about their current environment and create other Agents based on that reasoning.</p>
+<div class="section" id="addbehavior">
+<span id="addbehavior-label"></span><h2>addBehavior<a class="headerlink" href="#addbehavior" title="Permalink to this headline">¶</a></h2>
+<p>This method enables SAGE Agents to populate other SAGE Agents with new Behaviors.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>nodeName</strong> [string]</dt>
+<dd>This is the name of a SAGE Node where the target Agent exists.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>agentName</strong> [string]</dt>
+<dd>This is the name of the SAGE Agent that will receive the new Behavior.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>behaviorName</strong> [string]</dt>
+<dd>This is the name that was assigned to the SAGE Behavior by its developer.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>module</strong> [string]</dt>
+<dd>This is the file name of the module containing the Behavior to be added. Depending on the language the Behavior was written in, this could be a Java .jar file, a Python .egg file, or a native dynamic load library (.dll or .so).</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>topics</strong> [string vector]</dt>
+<dd>The topic vector specifies the set of topic names that the new Behavior will be interested in. Messages sent to the Behavior’s Agent will only be routed to this new Behavior if the topic specified in the message matches one of the topic names in this vector. Note that messages that do not specify a topic are sent to all Behaviors and conversely Behaviors that don’t specify a topic list receive all message irrespective of the topic the message specifies.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">addBehavior</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">agentName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">behaviorName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">module</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">topics</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">addBehavior</span><span class="o">(</span><span class="n">String</span> <span class="n">nodeName</span><span class="o">,</span> <span class="n">String</span> <span class="n">agentName</span><span class="o">,</span> <span class="n">String</span> <span class="n">behaviorName</span><span class="o">,</span> <span class="n">String</span> <span class="n">module</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">topics</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addBehavior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">agentName</span><span class="p">,</span> <span class="n">behaviorName</span><span class="p">,</span> <span class="n">module_</span><span class="p">,</span> <span class="n">topics</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="createagent">
+<span id="createagent-label"></span><h2>createAgent<a class="headerlink" href="#createagent" title="Permalink to this headline">¶</a></h2>
+<p>This method enables SAGE Agents to create other SAGE Agents through their Behaviors. New Agents can be created on an Agent’s local Node or a remote Node.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>nodeName</strong> [string]</dt>
+<dd>This is the name of a SAGE Node where the new Agent will be created.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>agentName</strong> [string]</dt>
+<dd>This is will be the name assigned to the new SAGE Agent. Agent names must be unique within the Node that contains them.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">createAgent</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">agentName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">createAgent</span><span class="o">(</span><span class="n">String</span> <span class="n">nodeName</span><span class="o">,</span> <span class="n">String</span> <span class="n">agentName</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createAgent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">agentName</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="createstate">
+<h2>createState<a class="headerlink" href="#createstate" title="Permalink to this headline">¶</a></h2>
+<p>This method enables Behaviors to create a new, named state in its Agent’s state space. State names must be unique so this method returns false if a state with the specified name already exists.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>name</strong> [string]</dt>
+<dd>This is the name of the new state to be added to state space.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">createState</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">createState</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="getstate">
+<h2>getState<a class="headerlink" href="#getstate" title="Permalink to this headline">¶</a></h2>
+<p>This method returns the value of a named state in an Agent’s state space. The method throws an exception if the specified state name is not found. The state value is returned as a generic value.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>name</strong> [string]</dt>
+<dd>This is the name of the state whose value will be returned.</dd>
+</dl>
+</li>
+</ul>
+<p>In C++, the value is returned as a boost::variant that can contain long, double, or std::string types. The boost::variant which() method can be used to determine the type held. The which() method returns the 0-based index of the type currently held by the boost::variant. In SAGE, a value of 0 is a long, a value of 1 is a double, and a value of 2 is a std::string.</p>
+<p>To retreive the actual value of the boost::variant, use the boost::get&lt;T&gt;(value) function template. For a long value use boost::get&lt;long&gt;(value), for a double value use boost::get&lt;double&gt;(value), and for a std::string value use boost::get&lt;std::string&gt;(value).</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">sageframework</span><span class="o">::</span><span class="n">StateValueType</span> <span class="n">getState</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Java the value is returned as a generic Object. Java’s getClass() method can be called on the Object to discover its type. The object can then be cast to the appropriate type to retreive its value.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Object</span> <span class="nf">getState</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Python, the type(value) function returns the type of a variable. Python variables are dynamically typed so the value returned from the getState can be assigned to Python variable.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="getstatenames">
+<h2>getStateNames<a class="headerlink" href="#getstatenames" title="Permalink to this headline">¶</a></h2>
+<p>This method returns a vector of all the state names that currently exist in an Agent’s state space.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">getStateNames</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span> <span class="nf">getStateNames</span><span class="o">()</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getStateNames</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="removeagent">
+<h2>removeAgent<a class="headerlink" href="#removeagent" title="Permalink to this headline">¶</a></h2>
+<p>This method enables SAGE Agents to remove other SAGE Agents through their Behaviors. Agents can be removed from an Agent’s local Node or a remote Node.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>nodeName</strong> [string]</dt>
+<dd>This is the name of a SAGE Node where the target Agent exists.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>agentName</strong> [string]</dt>
+<dd>This is the name of the SAGE Agent that is removed.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">removeAgent</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">agentName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeAgent</span><span class="o">(</span><span class="n">String</span> <span class="n">nodeName</span><span class="o">,</span> <span class="n">String</span> <span class="n">agentName</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">removeAgent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">agentName</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="removebehavior">
+<h2>removeBehavior<a class="headerlink" href="#removebehavior" title="Permalink to this headline">¶</a></h2>
+<p>This method enables SAGE Agents to remove existing Behaviors from other Agents.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>nodeName</strong> [string]</dt>
+<dd>This is the name of a SAGE Node where the target Agent exists.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>agentName</strong> [string]</dt>
+<dd>This is the name of the SAGE Agent that will have its Behavior removed.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>behaviorName</strong> [string]</dt>
+<dd>This is the name of the Behavior that will be removed.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">removeBehavior</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">agentName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">behaviorName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeBehavior</span><span class="o">(</span><span class="n">String</span> <span class="n">nodeName</span><span class="o">,</span> <span class="n">String</span> <span class="n">agentName</span><span class="o">,</span> <span class="n">String</span> <span class="n">behaviorName</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">removeBehavior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">agentName</span><span class="p">,</span> <span class="n">behaviorName</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="removestate">
+<h2>removeState<a class="headerlink" href="#removestate" title="Permalink to this headline">¶</a></h2>
+<p>This method enables Behaviors to remove a named state from its Agent’s state space. If the specified state name is not found, this method returns false.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>name</strong> [string]</dt>
+<dd>This is the name of the state to be removed from state space.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">removeState</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">removeState</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">removeState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setagentactive">
+<span id="setagentactive-label"></span><h2>setAgentActive<a class="headerlink" href="#setagentactive" title="Permalink to this headline">¶</a></h2>
+<p>This method enables SAGE Agents to activate and deactivate other SAGE Agents. Agents are created in an inactive state. Activating an inactive agents causes the <code class="xref py py-mod docutils literal notranslate"><span class="pre">setUp()</span></code> methods of its Behaviors to be called and its <code class="xref py py-mod docutils literal notranslate"><span class="pre">action()</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">message()</span></code> methods to be invoked based on the properties of the Agent and in response to incoming messages. Deactivating an active Agent causes the <code class="xref py py-mod docutils literal notranslate"><span class="pre">tearDown()</span></code> method of its Behaviors to be called and the Agent then becomes dormant.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>nodeName</strong> [string]</dt>
+<dd>This is the name of a SAGE Node where the target Agent exists.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>agentName</strong> [string]</dt>
+<dd>This is the name of the SAGE Agent that will be activated or deactivated.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>isActive</strong> [boolean]</dt>
+<dd>This is a flag indicating if an Agent is to be activated (true) or deactivated (false).</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setAgentActive</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">agentName</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">isActive</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAgentActive</span><span class="o">(</span><span class="n">String</span> <span class="n">nodeName</span><span class="o">,</span> <span class="n">String</span> <span class="n">agentName</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">isActive</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setAgentActive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeName</span><span class="p">,</span> <span class="n">agentName</span><span class="p">,</span> <span class="n">isActive</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sendfile">
+<h2>sendFile<a class="headerlink" href="#sendfile" title="Permalink to this headline">¶</a></h2>
+<p>This method transmits a file to the SAGE Server. This capability is useful for sending auxiliary data or arbitrary files to a centralized location. Files transmitted to a SAGE Server running on the Windows operating system are placed in the sage\downloads subfolder of the ProgramData folder (usually <code class="docutils literal notranslate"><span class="pre">C:\ProgramData\SAGE\downloads</span></code>).</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>filePath</strong> [string]</dt>
+<dd>This is a fully qualified path to the file.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">sendFile</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filePath</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendFile</span><span class="o">(</span><span class="n">String</span> <span class="n">filePath</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filePath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sendmessage">
+<h2>sendMessage<a class="headerlink" href="#sendmessage" title="Permalink to this headline">¶</a></h2>
+<p>The sendMessage method can be called by Behaviors to communicate with other Agents in the SAGE Agent network.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">sendMessage</span><span class="p">(</span><span class="k">const</span> <span class="n">sageframework</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span> <span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendMessage</span><span class="o">(</span><span class="n">Message</span> <span class="n">message</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setstate">
+<h2>setState<a class="headerlink" href="#setstate" title="Permalink to this headline">¶</a></h2>
+<p>This method sets the value of named state in an Agent’s state space. The method returns false if the state name is not found.
+In C++ setState is a templated function that is instantiated for values of type long, double, and std::string. It can be called with values that are one of those three types.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>name</strong> [string]</dt>
+<dd>This is the name of the state whose value will be modified.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>value</strong> [long, double, or std::string]</dt>
+<dd>This is the new value that the state will take on. Valid values must of type long, double, or std::string.</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+C++</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">setState</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Java</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">setState</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">Object</span> <span class="n">value</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Python</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="retrieving_information_about_your_agent_network.html" class="btn btn-neutral float-right" title="Retrieving Information About Your Agent Network" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="writing_a_sage_behavior.html" class="btn btn-neutral float-left" title="Writing a SAGE Behavior" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2019 U.S. Naval Research Laboratory, This effort is funded by OPNAV N94 and MARCORSYSCOM
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>
