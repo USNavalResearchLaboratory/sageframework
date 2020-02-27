@@ -112,31 +112,8 @@ The following System variables will be automatically added:
 	
 		C:\Program Files\NRL\SageNode
 		
-
-**Additional User variables**		
-		
-Add the following User variables if you would like to include support for ``Java`` or ``Python`` Behaviors. 
-
-Your actual path may be set with a different name or version number. Ensure each variable points to the directory of your distribution.
-
-.. envvar::  JAVAHOME
-
-	.. code-block:: bat
-	
-		For 64-bit: "C:\Program Files\Java\jre1.8.0_xx" or "C:\Program Files\Java\jdk1.8.0_xx"
-		
-		For 32-bit: "C:\Program Files (x86)\Java\jre1.8.0_xx" or "C:\Program Files (x86)\Java\jdk1.8.0_xx"
-
-.. envvar::  PYTHONHOME
-
-	.. code-block:: bat
-	
-		C:\Python27
-
 **Update your PATH System variable**		
 		
-Edit your PATH System variable to append your Users variables.
-
 Java installation requires access to *jvm.dll* and *java.exe*.
 
 Python requires access to *python.exe*.
@@ -149,7 +126,7 @@ Python requires access to *python.exe*.
 		
 		For Java JRE users: "C:\Program Files\Java\jre1.8.0_xx\bin;C:\Program Files\Java\jre1.8.0_xx\bin\server"
 		
-		For Python users: "%PYTHONHOME%"
+		For Python users: "C:\Python27"
 	
 		
 
