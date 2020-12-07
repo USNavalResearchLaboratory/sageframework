@@ -23,29 +23,29 @@ Note that the SDK is required to develop C++ Behaviors.
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 	| SAGE Framework |release|                                                                                                                                                 |
 	+===================================+======================================================================================================================================+
-	| `SAGE Server - Windows x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SageServerInstaller_x64-2.0.28.exe>`_                   |
+	| `SAGE Server - Windows x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SageServerInstaller_x64-2.0.32.exe>`_                   |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `SAGE Server - Windows x86 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SageServerInstaller_x86-2.0.28.exe>`_                   |
+	| `SAGE Server - Windows x86 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SageServerInstaller_x86-2.0.32.exe>`_                   |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `SAGE Server - Linux x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/nrl-sage-server-2.0.28.x86_64.rpm>`_                      |
+	| `SAGE Server - Linux x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/nrl-sage-server-2.0.32.x86_64.rpm>`_                      |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `SAGE Server - Linux x64 (no python) <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/nrl-sage-server-nopython-2.0.28.x86_64.rpm>`_ |
+	| `SAGE Server - Linux x64 (no python) <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/nrl-sage-server-nopython-2.0.32.x86_64.rpm>`_ |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `Node - Windows x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SageNodeInstaller_x64-2.0.28.exe>`_                            |
+	| `Node - Windows x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SageNodeInstaller_x64-2.0.32.exe>`_                            |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `Node - Windows x86 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SageNodeInstaller_x86-2.0.28.exe>`_                            |
+	| `Node - Windows x86 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SageNodeInstaller_x86-2.0.32.exe>`_                            |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `Node - Linux x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/nrl-sage-node-2.0.28.x86_64.rpm>`_                               |
+	| `Node - Linux x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/nrl-sage-node-2.0.32.x86_64.rpm>`_                               |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `Node - Linux x64 (no python) <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/nrl-sage-node-nopython-2.0.28.x86_64.rpm>`_          |
+	| `Node - Linux x64 (no python) <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/nrl-sage-node-nopython-2.0.32.x86_64.rpm>`_          |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `SDK - Windows x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SageSDKInstaller_x64-2.0.28.exe>`_                              |
+	| `SDK - Windows x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SageSDKInstaller_x64-2.0.32.exe>`_                              |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `SDK - Windows x86 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SageSDKInstaller_x86-2.0.28.exe>`_                              |
+	| `SDK - Windows x86 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SageSDKInstaller_x86-2.0.32.exe>`_                              |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `SDK - Linux x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/nrl-sage-sdk-2.0.28.x86_64.rpm>`_                                 |
+	| `SDK - Linux x64 <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/nrl-sage-sdk-2.0.32.x86_64.rpm>`_                                 |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-	| `Example - Sender and Receiver <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.28/SenderReceiver.zip>`_                               |
+	| `Example - Sender and Receiver <https://github.com/USNavalResearchLaboratory/sageframework/releases/download/v2.0.32/SenderReceiver.zip>`_                               |
 	+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 
