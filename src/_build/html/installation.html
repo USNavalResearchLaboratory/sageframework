@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; SAGE User Guide v2.0.28 documentation</title>
+  <title>Installation &mdash; SAGE User Guide v2.0.32 documentation</title>
   
 
   
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Starting a Server Instance" href="starting_a_server_instance.html" />
+    <link rel="next" title="SAGE App" href="sage_app.html" />
     <link rel="prev" title="Download" href="download.html" /> 
 </head>
 
@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.0.28
+                2.0.32
               </div>
             
           
@@ -99,11 +99,10 @@
 <li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#optional">Optional</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-for-development">Optional for development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a><ul>
@@ -118,27 +117,50 @@
 <li class="toctree-l2"><a class="reference internal" href="#installation-on-linux">Installation on Linux</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Creating Scripts</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Managing Scripts</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Starting Network</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Running Tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demonstration</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
 </ul>
 
             
@@ -219,11 +241,11 @@ Installation</div>
 <li>Red Hat Enterprise Linux 7</li>
 <li>Ubuntu 14</li>
 </ul>
-<div class="section" id="optional">
-<h3>Optional<a class="headerlink" href="#optional" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="optional-for-development">
+<h3>Optional for development<a class="headerlink" href="#optional-for-development" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://www.python.org/downloads/">Python</a> 2.6 or 2.7</li>
-<li><a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Runtime Environment</a> 8 and up.</li>
+<li><a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK</a> 8 and up.</li>
 </ul>
 </div>
 </div>
@@ -299,43 +321,22 @@ Installation</div>
 </div>
 </dd></dl>
 
-<p><strong>Additional User variables</strong></p>
-<p>Add the following User variables if you would like to include support for <code class="docutils literal notranslate"><span class="pre">Java</span></code> or <code class="docutils literal notranslate"><span class="pre">Python</span></code> Behaviors.</p>
-<p>Your actual path may be set with a different name or version number. Ensure each variable points to the directory of your distribution.</p>
-<dl class="envvar">
-<dt id="envvar-JAVAHOME">
-<code class="descname">JAVAHOME</code><a class="headerlink" href="#envvar-JAVAHOME" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> 64-bit: <span class="s2">&quot;C:\Program Files\Java\jre1.8.0_xx&quot;</span> or <span class="s2">&quot;C:\Program Files\Java\jdk1.8.0_xx&quot;</span>
-
-For 32-bit: <span class="s2">&quot;C:\Program Files (x86)\Java\jre1.8.0_xx&quot;</span> or <span class="s2">&quot;C:\Program Files (x86)\Java\jdk1.8.0_xx&quot;</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="envvar">
-<dt id="envvar-PYTHONHOME">
-<code class="descname">PYTHONHOME</code><a class="headerlink" href="#envvar-PYTHONHOME" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\Python27</span>
-</pre></div>
-</div>
-</dd></dl>
-
 <p><strong>Update your PATH System variable</strong></p>
-<p>Edit your PATH System variable to append your Users variables.</p>
 <p>Java installation requires access to <em>jvm.dll</em> and <em>java.exe</em>.</p>
-<p>Python requires access to <em>python.exe</em>.</p>
 <dl class="envvar">
 <dt id="envvar-PATH">
 <code class="descname">PATH</code><a class="headerlink" href="#envvar-PATH" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> Java JDK users: <span class="s2">&quot;C:\Program Files\Java\jdk1.8.0_xx\bin;C:\Program Files\Java\jdk1.8.0_xx\jre\bin\server&quot;</span>
-
-For Java JRE users: <span class="s2">&quot;C:\Program Files\Java\jre1.8.0_xx\bin;C:\Program Files\Java\jre1.8.0_xx\bin\server&quot;</span>
-
-For Python users: <span class="s2">&quot;</span><span class="nv">%PYTHONHOME%</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </dd></dl>
 
+<p>Python requires access to <em>python.exe</em>.</p>
+<blockquote>
+<div><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> Python users: <span class="s2">&quot;C:\Python27&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="installation-on-linux">
 <span id="linux-install"></span><h2>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permalink to this headline">¶</a></h2>
@@ -383,7 +384,7 @@ sudo rpm -Uvh nrl-sage-server-*.rpm
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="starting_a_server_instance.html" class="btn btn-neutral float-right" title="Starting a Server Instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sage_app.html" class="btn btn-neutral float-right" title="SAGE App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="download.html" class="btn btn-neutral float-left" title="Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

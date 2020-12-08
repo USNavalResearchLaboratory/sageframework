@@ -25,11 +25,11 @@ Note that SAGE may be compatible with other versions of Windows and Linux distri
 - Ubuntu 14
 
 
-Optional
+Optional for development
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 - `Python <https://www.python.org/downloads/>`_ 2.6 or 2.7
-- `Java SE Runtime Environment <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 8 and up.
+- `Java JDK <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 8 and up.
 
 
 
@@ -116,16 +116,16 @@ The following System variables will be automatically added:
 		
 Java installation requires access to *jvm.dll* and *java.exe*.
 
-Python requires access to *python.exe*.
-
 .. envvar::  PATH
 
 	.. code-block:: bat
 	
 		For Java JDK users: "C:\Program Files\Java\jdk1.8.0_xx\bin;C:\Program Files\Java\jdk1.8.0_xx\jre\bin\server"
-		
-		For Java JRE users: "C:\Program Files\Java\jre1.8.0_xx\bin;C:\Program Files\Java\jre1.8.0_xx\bin\server"
-		
+
+Python requires access to *python.exe*.
+
+	.. code-block:: bat
+				
 		For Python users: "C:\Python27"
 	
 		
