@@ -99,7 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
 </ul>
@@ -220,28 +220,6 @@ Example</div>
 </div>
 <div class="section" id="example">
 <span id="examples-label"></span><h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
-<p>Download and extract the “Example - Sender and Receiver” package from the <a class="reference internal" href="download.html#download-label"><span class="std std-ref">Download</span></a> page.</p>
-<ol class="arabic">
-<li><p class="first">Compile <code class="docutils literal notranslate"><span class="pre">SenderReceiverBehavior.java</span></code> file then generate JAR file by opening the terminal and typing the commands:</p>
-<blockquote>
-<div><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>javac -cp <span class="s2">&quot;</span><span class="nv">%SAGE_SERVER_HOME%</span><span class="s2">&quot;</span>\SageJavaBehaviorInterface.jar SenderReceiverBehavior.java
-
-jar cf SenderReceiverBehavior.jar SenderReceiverBehavior.class
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p class="first">Directory structure</p>
-<blockquote>
-<div><p>On <code class="docutils literal notranslate"><span class="pre">Server</span></code> machine copy the Behavior file into the Java Behavior sub-directory:</p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> Windows: C:\ProgramData\SAGE\behaviors\Java\SenderReceiverBehavior.jar
-
-For Linux: /etc/Sage/behaviors/Java/SenderReceiverBehavior.jar
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-</ol>
 <div class="section" id="test-case">
 <h2>Test case<a class="headerlink" href="#test-case" title="Permalink to this headline">¶</a></h2>
 <p><strong>SenderReceiverTest.robot</strong></p>
@@ -439,6 +417,14 @@ Log Results
 </div>
 <div class="section" id="running-test">
 <h2>Running test<a class="headerlink" href="#running-test" title="Permalink to this headline">¶</a></h2>
+<p>On your <code class="docutils literal notranslate"><span class="pre">Server</span></code> machine, create a java file using the above Behavior code to create <code class="docutils literal notranslate"><span class="pre">SenderReceiverBehavior.java</span></code>. Compile the code and place it into the Java Behavior sub-directory:</p>
+<blockquote>
+<div><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> Windows: C:\ProgramData\SAGE\behaviors\Java\SenderReceiverBehavior.jar
+
+For Linux: /etc/Sage/behaviors/Java/SenderReceiverBehavior.jar
+</pre></div>
+</div>
+</div></blockquote>
 <p>Ensure that both the SAGE Server and SAGE Node were installed with Java support. In addition, ensure that the Behavior file has been placed in the correct directory <em>(C:\ProgramData\SAGE\behaviors\Java)</em> on the Server machine. If not yet done, add the Behavior file to the specified directory.</p>
 <p>Start the SAGE Server by opening the terminal and typing the command:</p>
 <blockquote>
@@ -459,6 +445,7 @@ Log Results
 </div>
 </div></blockquote>
 <p>Upon successful connection, you will be ready to run the test.</p>
+<p>Create your Robot test case using the above Robot Framework code to create <code class="docutils literal notranslate"><span class="pre">SenderReceiverTest.robot</span></code>.</p>
 <p>Start the example by by typing:</p>
 <blockquote>
 <div><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>java -cp <span class="s2">&quot;</span><span class="nv">%SAGE_CLASSPATH%</span><span class="s2">&quot;</span> org.robotframework.RobotFramework SenderReceiverTest.robot

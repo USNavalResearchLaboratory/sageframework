@@ -605,7 +605,7 @@ This is an example Behavior in its entirety.  Other parts of the SAGE system wou
 				result.m_executionResult = sageframework::ExecutionResultType::CompletionSuccess;
 				return true;
 			}
-		
+
 	.. container:: toggle
 
 		.. container:: header
@@ -687,9 +687,6 @@ This is an example Behavior in its entirety.  Other parts of the SAGE system wou
 
 			}
 
-
-
-		
 	.. container:: toggle
 
 		.. container:: header

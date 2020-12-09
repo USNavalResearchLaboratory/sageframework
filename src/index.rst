@@ -7,7 +7,7 @@
    sage_server
    sage_node
    how_it_works
-   download
+   Download <http://github.com/USNavalResearchLaboratory/sageframework/releases/>
    installation
    sage_app
 
@@ -84,7 +84,7 @@
 		
 	.. container:: header-banner-title-button
 	
-		:ref:`download-label`
+		`Download <http://github.com/USNavalResearchLaboratory/sageframework/releases/>`_
 		
 		Release |release|
 	

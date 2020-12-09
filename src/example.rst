@@ -9,31 +9,7 @@
 
 Example
 ==================
-
-
-Download and extract the "Example - Sender and Receiver" package from the :ref:`download-label` page.
-
-1. Compile ``SenderReceiverBehavior.java`` file then generate JAR file by opening the terminal and typing the commands:
-
-	.. code-block:: bat
-		
-		javac -cp "%SAGE_SERVER_HOME%"\SageJavaBehaviorInterface.jar SenderReceiverBehavior.java
-        
-		jar cf SenderReceiverBehavior.jar SenderReceiverBehavior.class
 	
-2. Directory structure
-
-	On ``Server`` machine copy the Behavior file into the Java Behavior sub-directory:
-
-	.. code-block:: bat
-		
-		For Windows: C:\ProgramData\SAGE\behaviors\Java\SenderReceiverBehavior.jar 
-
-		For Linux: /etc/Sage/behaviors/Java/SenderReceiverBehavior.jar 
-
-
-
-
 Test case
 ----------------------------------------------------------------
 
@@ -246,6 +222,15 @@ The tearDown() method will be invoked upon deactivation, signaling the Agent to 
 Running test
 -------------------------------------
 
+On your ``Server`` machine, create a java file using the above Behavior code to create ``SenderReceiverBehavior.java``. Compile the code and place it into the Java Behavior sub-directory:
+
+	.. code-block:: bat
+		
+		For Windows: C:\ProgramData\SAGE\behaviors\Java\SenderReceiverBehavior.jar 
+
+		For Linux: /etc/Sage/behaviors/Java/SenderReceiverBehavior.jar 
+
+
 Ensure that both the SAGE Server and SAGE Node were installed with Java support. In addition, ensure that the Behavior file has been placed in the correct directory *(C:\\ProgramData\\SAGE\\behaviors\\Java)* on the Server machine. If not yet done, add the Behavior file to the specified directory.
 
 Start the SAGE Server by opening the terminal and typing the command:
@@ -269,6 +254,8 @@ Create and connect a Node named ``NodeTwo`` by typing:
 	
 	
 Upon successful connection, you will be ready to run the test. 
+
+Create your Robot test case using the above Robot Framework code to create ``SenderReceiverTest.robot``.
 
 Start the example by by typing:
 
