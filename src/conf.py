@@ -67,7 +67,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'SAGE User Guide'
-copyright = u'2016-2019 U.S. Naval Research Laboratory, This effort is funded by OPNAV N94 and MARCORSYSCOM'
+copyright = u'2016-2020 U.S. Naval Research Laboratory, This effort is funded by OPNAV N94 and MARCORSYSCOM'
 author = u'U.S. Naval Research Laboratory'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -305,3 +305,7 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+html_js_files = [
+    'js/custom.js'
+]

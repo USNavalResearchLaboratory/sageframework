@@ -12,12 +12,18 @@ Changelog
 ===========================
 **SAGE 2.0.32**
 
-	- Sage Server App now has the capability to show Agents' State Space.
-	- Better error messages when using Robot.
-	- New server option to not print or log regular Sage messages.  Does not affect warnings, errors or exceptions.  Use option 'QUIET' for the command line server.  For the Server App check the 'Quiet Mode' box in Server Settings.
+Release date: 2020-12-04
+
+Core and Builtins
+
+	- Issue #54: Improved error messages when using Robot.
+	- New server option to not print or log regular Sage messages.  Does not affect warnings, errors or exceptions.
 	- Issue #53: Improved Node performance when processing a high volume of messages.
 
-Release date: 2020-12-04
+Server Application
+
+	- New server option to not print or log regular Sage messages by selecting the 'Quiet Mode' box in Server Settings.  Does not affect warnings, errors or exceptions.
+	- Sage Server App now has the capability to show Agents' State Space.
 
 **SAGE 2.0.28**
 

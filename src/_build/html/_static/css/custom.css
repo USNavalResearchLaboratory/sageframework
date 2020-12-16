@@ -432,7 +432,7 @@ div.header-banner-title-button.container p{
 	font-size: .85rem;
 }
 /* Download button Title page Only */
-.header-banner-title-color .std.std-ref {  
+.header-banner-title-color a {  
 	color: white;
 	background: #03a9f4 ;
 	position: relative;
@@ -456,7 +456,7 @@ div.header-banner-title-button.container p{
 	margin:0 auto;
 	width: 300px;
 }
-.header-banner-title-color .std.std-ref:hover {  /* Download button hover*/
+.header-banner-title-color a:hover {  /* Download button hover*/
 	color: white;
 	background: #4fc3f7 ;
 	position: relative;
@@ -479,7 +479,7 @@ div.header-banner-title-button.container p{
 	font-size: .9rem;
 	font-size:125%;
 }
-.header-banner-title-color .std.std-ref:active {
+.header-banner-title-color a:active {
 	background: #80d8ff ;
 	-webkit-transition: background 0.2s linear;
 	-moz-transition: background 0.2s linear;

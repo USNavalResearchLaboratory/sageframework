@@ -85,7 +85,7 @@
 	.. container:: header-banner-title-button
 	
 		`Download <http://github.com/USNavalResearchLaboratory/sageframework/releases/>`_
-		
+
 		Release |release|
 	
 .. container:: footer-banner-title-color
