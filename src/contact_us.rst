@@ -10,6 +10,6 @@ Contact us
 ===========================
 **Email**
 
-sageframework@itd.nrl.navy.mil
+sageframework@nrl.navy.mil
 
 
