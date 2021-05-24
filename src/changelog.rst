@@ -10,6 +10,16 @@
  
 Changelog
 ===========================
+**SAGE 2.0.34**
+
+Release date: 2021-05-20
+
+Core and Builtins
+
+	- Issue #56: Fixed bug that would allow Robot tests to continue if Behavior file was not found
+	- Issue #55: Fixed java memory leak in SAGE Node code
+
+
 **SAGE 2.0.32**
 
 Release date: 2020-12-04

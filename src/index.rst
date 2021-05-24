@@ -90,7 +90,7 @@
 	
 .. container:: footer-banner-title-color
 	
-		Latest Documentation Update:		December 21, 2020
+		Latest Documentation Update:		May 20, 2021
    
    
 
