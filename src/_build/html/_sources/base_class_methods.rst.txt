@@ -33,7 +33,7 @@ This method enables SAGE Agents to populate other SAGE Agents with new Behaviors
 	This is the file name of the module containing the Behavior to be added. Depending on the language the Behavior was written in, this could be a Java .jar file, a Python .egg file, or a native dynamic load library (.dll or .so).
 
 - **topics** [string vector]
-	The topic vector specifies the set of topic names that the new Behavior will be interested in. Messages sent to the Behavior's Agent will only be routed to this new Behavior if the topic specified in the message matches one of the topic names in this vector. Note that messages that do not specify a topic are sent to all Behaviors and conversely Behaviors that don't specify a topic list receive all message irrespective of the topic the message specifies.
+	The topic vector specifies the set of topic names that the new Behavior will be interested in. Messages sent to the Behavior's Agent will only be routed to this new Behavior if the topic specified in the message matches one of the topic names in this vector. Behaviors that don’t specify a topic list receive all message irrespective of the topic the message specifies.
 
 .. container:: padding
 	

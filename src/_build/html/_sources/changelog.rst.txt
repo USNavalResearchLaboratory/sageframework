@@ -10,21 +10,36 @@
  
 Changelog
 ===========================
+**SAGE 2.0.32**
+
+Release date: 2020-12-04
+
+Core and Builtins
+
+	- Issue #54: Improved error messages when using Robot.
+	- New server option to not print or log regular Sage messages.  Does not affect warnings, errors or exceptions.
+	- Issue #53: Improved Node performance when processing a high volume of messages.
+
+Server Application
+
+	- New server option to not print or log regular Sage messages by selecting the 'Quiet Mode' box in Server Settings.  Does not affect warnings, errors or exceptions.
+	- Sage Server App now has the capability to show Agents' State Space.
+
 **SAGE 2.0.28**
 
 Release date: 2019-12-09
 
 Core and Builtins
 
-	- Issue #52: Fixed bug in periodic actions that occured when the period specified is very small. This could lead to a race condition.
-	
+	- Issue #52: Fixed bug in periodic actions that occurred when the period specified is very small. This could lead to a race condition.
+
 **SAGE 2.0.24**
 
 Release date: 2019-08-05
 
 Core and Builtins
 
-	- Issue #51: Fixed bug, Java behaviors within JAR files that include supportiing libraries could throw a duplicate class exception due to how Java loads dependencies.
+	- Issue #51: Fixed bug, Java behaviors within JAR files that include supporting libraries could throw a duplicate class exception due to how Java loads dependencies.
 	
 Server Application
 
