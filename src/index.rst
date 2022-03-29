@@ -1,3 +1,6 @@
+SAGE Framework’s Documentation
+==================================
+
 .. toctree::
    :hidden:
    :caption: Getting Started
@@ -67,69 +70,18 @@
    changelog
    help
    contact_us
-   
-   
-
-.. _my-reference-label:
-
-.. container:: header-banner-title-color
-
-	.. container:: header-banner-title-text
-	
-		SAGE (Sentry Agents) Framework
-		
-	.. container:: header-banner-title-caption
-	
-		A dynamic multi-agent based solution for system automation
-		
-	.. container:: header-banner-title-button
-	
-		`Download <http://github.com/USNavalResearchLaboratory/sageframework/releases/>`_
-
-		Release |release|
-	
-.. container:: footer-banner-title-color
-	
-		Latest Documentation Update:		May 20, 2021
-   
-   
 
 .. figure::  _images/sage_network.png
    :align:   center
    
 SAGE makes automating complex systems simple.
 -------------------------------------------------------------------------------------------------------------------------
+		
+Language Agnostic:
+   SAGE supports a wide range of popular programming languages including: C++, Java, and Python. No need to learn a new language to utilize SAGE.
 
-
-.. container:: three-caption
-	
-	.. figure::  _images/ic_clear_all_black_48dp_2x.png
-		:align:   center
+Open Integration:
+   SAGE permits language extensibility and enhancement so that you can easily integrate SAGE with other tools and applications. Built-in support is provided for Robot Framework.
 		
-	Language Agnostic
-	
-	.. container:: three-text
-	
-		SAGE supports a wide range of popular programming languages including: C++, Java, and Python. No need to learn a new language to utilize SAGE.
-
-.. container:: three-caption
-	
-	.. figure::  _images/ic_device_hub_black_48dp_2x.png
-		:align:   center
-		
-	Open Integration
-	
-	.. container:: three-text
-	
-		SAGE permits language extensibility and enhancement so that you can easily integrate SAGE with other tools and applications. Built-in support is provided for Robot Framework.
-		
-.. container:: three-caption
-	
-	.. figure::  _images/ic_check_circle_black_48dp_2x.png
-		:align:   center
-		
-	Easy to use
-	
-	.. container:: three-text
-	
-		SAGE is a cross-platform effort that was created with all users in mind. There is detailed documentation to support developers and testers alike.
+Easy to use:
+   SAGE is a cross-platform effort that was created with all users in mind. There is detailed documentation to support developers and testers alike.
