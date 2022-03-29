@@ -1,11 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Writing a SAGE Behavior
-		
-
 Writing a SAGE Behavior
 ============================================
 

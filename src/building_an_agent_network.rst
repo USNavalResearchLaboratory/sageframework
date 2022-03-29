@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Building an Agent Network
-
-
 Building an Agent Network
 ===========================================================
 

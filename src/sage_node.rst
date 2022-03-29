@@ -1,11 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		SAGE Node
-		
-
 SAGE Node
 ==========================
 

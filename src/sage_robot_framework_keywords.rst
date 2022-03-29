@@ -1,9 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		SAGE Robot Framework Keywords
-
 SAGE Robot Framework Keywords
 ====================================================================
 

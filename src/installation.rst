@@ -1,14 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Installation
-		
-	.. container:: header-banner-caption
-	
-		5 easy-to-follow steps.
-		
 Installation
 ==========================
 

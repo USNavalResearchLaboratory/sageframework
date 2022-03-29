@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		SAGE App
-
-
 SAGE App
 ===============================
 

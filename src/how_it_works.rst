@@ -1,10 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		How It Works
-		
 How It Works
 ==========================
 

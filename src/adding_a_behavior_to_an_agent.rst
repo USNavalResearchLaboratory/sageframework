@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Adding a Behavior to an Agent
-
-
 Adding a Behavior to an Agent
 ============================================================
 

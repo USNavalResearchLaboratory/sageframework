@@ -1,11 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Using Supplemental Files in Your Automation
-
-
 Using Supplemental Files in Your Automation
 ================================================================================================
 

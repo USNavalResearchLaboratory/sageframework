@@ -1,11 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Creating Your Own Controller Application
-		
-		
-
 Creating Your Own Controller Application
 ======================================================================
 

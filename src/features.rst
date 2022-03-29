@@ -1,18 +1,5 @@
-
-.. _my-reference-label:
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Features
-		
-	.. container:: header-banner-caption
-	
-		Fast. Simple. Seamless.
-
 Features 
-***************************************
+=====================================
 
 .. container:: row
 

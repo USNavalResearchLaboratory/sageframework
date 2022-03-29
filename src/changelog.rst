@@ -1,11 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Changelog
-
-
 .. _`view-changelog`:
  
 Changelog

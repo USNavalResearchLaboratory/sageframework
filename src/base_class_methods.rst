@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Base Class - SAGE Behavior Methods
-		
-
 Base Class - SAGE Behavior Methods
 ================================================================
 

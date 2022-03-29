@@ -1,15 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Responding to a Message Sent to an Agent
-		
-	.. container:: header-banner-caption
-		
-		Reactive Response vs. Proactive Response
-
-
-
 Responding to a Message Sent to an Agent
 =======================================================================
 

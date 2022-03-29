@@ -1,10 +1,3 @@
-
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Example
-		
 .. _examples-label:
 
 Example

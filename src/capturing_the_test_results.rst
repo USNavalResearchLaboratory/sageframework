@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Capturing the Test Results
-		
-
 Capturing the Test Results
 ===============================
 

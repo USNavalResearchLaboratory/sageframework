@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Starting a Server Instance
-	
-
 Starting a Server Instance
 =====================================================
 

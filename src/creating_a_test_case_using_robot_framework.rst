@@ -1,9 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Creating A Test Case Using Robot Framework - Controller Application
-
 Creating A Test Case Using Robot Framework - Controller Application
 ====================================================================
 

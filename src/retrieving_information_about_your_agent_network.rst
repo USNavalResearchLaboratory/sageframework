@@ -1,14 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Retrieving Information About Your Agent Network
-
-	.. container:: header-banner-caption
-	
-		Agent Introspection and State
-		
-
 Retrieving Information About Your Agent Network
 ================================================================================
  

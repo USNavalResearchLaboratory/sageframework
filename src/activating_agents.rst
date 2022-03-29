@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Activating Agents
-
-
 Activating Agents
 =======================================================
 

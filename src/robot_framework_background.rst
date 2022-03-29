@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Robot Framework Background
-		
-
 Robot Framework Background
 ===============================
 

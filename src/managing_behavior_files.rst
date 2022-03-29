@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Managing Behavior Files
-		
-
 Managing Behavior Files
 ===============================
 

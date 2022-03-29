@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Connecting a Node to the Server
-	
-
 Connecting a Node to the Server
 =====================================================
 

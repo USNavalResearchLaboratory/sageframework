@@ -1,10 +1,3 @@
-.. container:: header-banner-color
-
-	.. container:: header-banner-text
-	
-		Sending Messages Between Agents
-		
-		
 Sending Messages Between Agents
 ====================================================
 
