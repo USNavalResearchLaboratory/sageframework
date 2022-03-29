@@ -34,7 +34,7 @@ This method enables SAGE Agents to populate other SAGE Agents with new Behaviors
 
 		.. container:: header
 
-			C++
+			``C++``
 
 		.. code-block:: cpp
 
