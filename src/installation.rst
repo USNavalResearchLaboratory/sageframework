@@ -9,7 +9,7 @@ Requirements
 Note that SAGE may be compatible with other versions of Windows and Linux distributions not listed.
 
 
-- Windows 7, 8, 8.1, 10, Server 2013
+- Windows 8, 8.1, 10, Server 2013
 - Red Hat Enterprise Linux 7
 - Ubuntu 14
 
