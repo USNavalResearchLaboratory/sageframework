@@ -71,7 +71,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'SAGE User Guide'
-copyright = u'2016-2022 U.S. Naval Research Laboratory, This effort is funded by OPNAV N94 and MARCORSYSCOM'
+copyright = u'2016-2022 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM'
 author = u'U.S. Naval Research Laboratory'
 
 # The version info for the project you're documenting, acts as replacement for
