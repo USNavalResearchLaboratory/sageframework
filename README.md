@@ -6,7 +6,7 @@ SAGE is free software and has no dependencies that require paid licenses or impo
  
 SAGE was designed to be pragmatic so that it can easily integrate into new or existing software systems. SAGE provides interface libraries that allow external applications to build, control, and interact with SAGE agent networks. SAGE Agents can also interact with their surrounding sofware environment wherever that may be. SAGE includes an interactive agent development environment called SAGE App where you can interactively build, experiment with, visualize, and store agent networks.
 
-Full documentation is available at https://usnavalresearchlaboratory.github.io/sageframework/
+The full documentation is available at https://usnavalresearchlaboratory.github.io/sageframework/ 
 
 [Download SAGE Framework](https://github.com/USNavalResearchLaboratory/sageframework/releases)
 
