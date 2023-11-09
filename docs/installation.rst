@@ -6,7 +6,7 @@ Installation
 Requirements
 ---------------------------
 
-Note that SAGE may be compatible with other versions of Windows and Linux distributions not listed.
+Note that SAGE may be compatible with other versions of Windows and Linux distributions not listed below
 
 
 - Windows 8, 8.1, 10, Server 2013
