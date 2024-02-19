@@ -17,11 +17,12 @@ On a :mod:`Linux` terminal enter the following command:
 
 *scheduler_mode* is optional and accepted mode values depend of the current CPU load:
 	
-	- "high" (Default) -  Scheduler runs with sub millisecond accuracy and yields the processor between runs of the scheduler. Running in high mode is not recommended for battery powered devices.
-	- "medium" - Scheduler runs every 1-2 milliseconds.
+	- "high" -  Scheduler runs with sub millisecond accuracy and yields the processor between runs of the scheduler. Running in high mode is not recommended for battery powered devices.
+	- "medium" (Default) - Scheduler runs every 1-2 milliseconds.
 	- "low" - Scheduler runs every 15 milliseconds.
 
 
 
-To verify if a SAGE Node is operational, check the prompt window and confirm that the following text is displayed, ``Connected to SAGE runtime using ip address {server_IP_address}:{port_number}``.
+To verify if a SAGE Node is operational, check the prompt window and confirm that the following text is displayed
+	 ``Connected to SAGE runtime using ip address {server_IP_address}:{port_number}``.
 

@@ -24,7 +24,7 @@ SAGE Framework’s Documentation
 
 .. toctree::
    :hidden:
-   :caption: Creating Scripts
+   :caption: Creating Behaviors
 
    writing_a_sage_behavior
    base_class_methods
@@ -34,7 +34,7 @@ SAGE Framework’s Documentation
 
 .. toctree::
    :hidden:
-   :caption: Managing Scripts
+   :caption: Managing Behaviors
 
    managing_behavior_files
    adding_a_behavior_to_an_agent
@@ -78,10 +78,13 @@ SAGE makes automating complex systems simple.
 -------------------------------------------------------------------------------------------------------------------------
 		
 Language Agnostic:
-   SAGE supports a wide range of popular programming languages including: C++, Java, and Python. No need to learn a new language to utilize SAGE.
+   SAGE is designed so that behaviors can be written in a wide range of programming languages. SAGE currently supports behaviors written in C++, Java, and Python.   
 
 Open Integration:
-   SAGE permits language extensibility and enhancement so that you can easily integrate SAGE with other tools and applications. Built-in support is provided for Robot Framework.
+   SAGE provides powerful software interfaces that facilitate tight integration between SAGE agents and external software systems.
+
+SAGE Clusters:
+   SAGE supports a fog computing model with dynamic discovery. SAGE servers can dynamically discover and connect to other server instances so that agents can communicate across cloud boundaries.
 		
 Easy to use:
-   SAGE is a cross-platform effort that was created with all users in mind. There is detailed documentation to support developers and testers alike.
+   SAGE Server and Node are containerized so that they can be easily deployed where they are needed using any container management platform.

@@ -2,6 +2,20 @@
  
 Changelog
 ===========================
+**SAGE 3.0.3b** 
+
+- This is a beta release. For access to the software email us at sageframework@nrl.navy.mil
+
+Release date: 2024-02-20
+
+Core and Builtins
+
+	- Both SAGE Node and Server are containerized
+	- Added Node Manager app to manage containerized and native instances of SAGE Node
+	- Added support for SAGE clusters. SAGE Servers running on remote machines can now discover each other and exchange agent messages
+	- Node and Server authentication. Nodes and Server instances can optionally use SSH-based authentication to encrypt their communications as well as to perform authentication
+	- Many UI enhancements
+
 **SAGE 2.0.34**
 
 Release date: 2021-05-20

@@ -749,6 +749,6 @@ This is an example Behavior in its entirety.  Other parts of the SAGE system wou
 Packaged Behaviors
 +++++++++++++++++++++++++++++++++++++++++++++++++
 
-SAGE Behaviors **MUST** be packaged into .JAR or .EGG files for Java and Python behaviors respectively. C++ behaviors are packaged as .DLL or .SO modules depending on the target platform.   
+SAGE Behaviors **MUST** be packaged into .JAR or .WHL files for Java and Python behaviors respectively. C++ behaviors are packaged as .DLL or .SO modules depending on the target platform.   
 
 Note that there can only be one SAGE Behavior per package. 

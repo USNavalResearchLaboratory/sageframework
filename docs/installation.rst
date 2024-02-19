@@ -9,16 +9,16 @@ Requirements
 Note that SAGE may be compatible with other versions of Windows and Linux distributions not listed below
 
 
-- Windows 8, 8.1, 10, Server 2013
-- Red Hat Enterprise Linux 7
-- Ubuntu 14
+- Windows 10, 11, Server 2016
+- Red Hat Enterprise Linux 8
+- Ubuntu 18
 
 
 Optional for development
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-- `Python <https://www.python.org/downloads/>`_ 2.6 or 2.7
-- `Java JDK <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 8 and up.
+- `Python <https://www.python.org/downloads/>`_ 3.10
+- `Java JDK <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 11 and up.
 
 
 

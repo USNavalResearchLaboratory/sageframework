@@ -16,7 +16,8 @@ On a :mod:`Linux` terminal enter the following command:
 		SageServerConsole {port_number}
 	
 		
-To verify a running SAGE Server instance, check the prompt window and confirm that the following text is displayed, ``SAGE server started listening on port: {port_number}``.
+To verify a running SAGE Server instance, check the prompt window and confirm that the following text is displayed
+	``SAGE server started listening on port: {port_number}``.
 
 
 This can also be accomplished using the SAGE App:

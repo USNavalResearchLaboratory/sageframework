@@ -9,7 +9,7 @@ Features
 		
 		.. container:: two-text
 		
-			SAGE is a multi-agent framework written in C++. It is both language and operating system agnostic. The SAGE control interface supports a wide range of programming languages including: C++, Java, and Python. 
+			SAGE was designed to be both language and operating system agnostic. SAGE supports agent behaviors written in C++, Java, and Python. In most cases, new programming languages can be readily integrated.
 			
 	.. container:: two-caption
 
@@ -20,7 +20,7 @@ Features
 	.. container:: two-caption
 
 		.. figure::  _images/features_2.png
-		
+
 	.. container:: two-caption
 
 		Dynamic agent configuration
