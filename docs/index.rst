@@ -1,4 +1,4 @@
-SAGE Framework’s Documentation
+SAGE Framework Documentation
 ==================================
 
 .. toctree::
