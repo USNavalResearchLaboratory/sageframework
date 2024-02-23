@@ -11,7 +11,7 @@ Note that SAGE may be compatible with other versions of Windows and Linux distri
 
 - Windows 10, 11, Server 2016
 - Red Hat Enterprise Linux 8
-- Ubuntu 18
+- Ubuntu 20
 
 
 Optional for development
@@ -93,7 +93,7 @@ The following System variables will be automatically added:
 
 	.. code-block:: bat
 
-		%SAGE_SERVER_HOME%;%SAGE_SERVER_HOME%\robotframework-2.9.2.jar;%SAGE_SERVER_HOME%\SageRemoteInterface.jar;%SAGE_SERVER_HOME%\SageJavaBehaviorInterface.jar
+		%SAGE_SERVER_HOME%;%SAGE_SERVER_HOME%\robotframework-4.1.2.jar;%SAGE_SERVER_HOME%\SageRemoteInterface.jar;%SAGE_SERVER_HOME%\SageJavaBehaviorInterface.jar
 
 .. envvar::  SAGE_NODE_HOME
 
@@ -103,19 +103,19 @@ The following System variables will be automatically added:
 		
 **Update your PATH System variable**		
 		
-Java installation requires access to *jvm.dll* and *java.exe*.
+Java installation requires access to *jvm.dll* and *java.exe*.  The exact values will change depending on which release of Java you have and whether or not you have the jdk or jre.  The jdk is required for Java Behavior development, the jre is sufficient for Java Behavior execution.
 
 .. envvar::  PATH
 
 	.. code-block:: bat
 	
-		For Java JDK users: "C:\Program Files\Java\jdk1.8.0_xx\bin;C:\Program Files\Java\jdk1.8.0_xx\jre\bin\server"
+		For Java JDK users: "C:\Program Files\Java\jdk-11.0.2\bin;C:\Program Files\Java\jdk-11.0.2\jre\bin\server"
 
-Python requires access to *python.exe*.
+Python requires access to *python.exe*.  The exact folder may be different on your system.
 
 	.. code-block:: bat
 				
-		For Python users: "C:\Python27"
+		For Python users: "C:\Program Files\Python310"
 	
 		
 
@@ -124,11 +124,17 @@ Python requires access to *python.exe*.
 Installation on Linux
 -----------------------------
 
-On a terminal enter the following command, assuming the current sage distribution rpms are in the local folder:
+On a terminal enter the following command, assuming the current sage distribution packages are in the local folder:
 
 .. code-block:: bat
 
 	sudo rpm -Uvh nrl-sage-node-*.rpm
+
+or
+
+.. code-block:: bat
+
+	sudo dpkg -i nrl-sage-node-*.deb
 
 Note that the SDK package is optional and needed only for C++ behavior development. Java and Python Behaviors can be developed without it. Note that the Linux Server is still considered to be an experimental version. To install the SDK and Server:
 
@@ -137,12 +143,11 @@ Note that the SDK package is optional and needed only for C++ behavior developme
 	sudo rpm -Uvh nrl-sage-sdk-*.rpm
 	sudo rpm -Uvh nrl-sage-server-*.rpm
 
-
-If you're on a Debian based Linux that does not have rpm, such as Ubuntu, you can install the alien package. Then the above rpm commands will work.
+or
 
 .. code-block:: bat
-
-	sudo apt-get install alien
+	sudo dpkg -i nrl-sage-sdk-*.deb
+	sudo dpkg -i nrl-sage-server-*.deb
 
 **Environment variables**	
 
@@ -156,13 +161,5 @@ It can also be temporarily set using the same command, typically:
 
 		export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:{JRE_HOME}/lib/amd64/server
 		
-If you intend to use the Robot Framework on Linux with the SAGE Server you will need to define the ``SAGE_ROBOT_LIBRARY`` environment variable.
-
-.. envvar::  SAGE_ROBOT_LIBRARY
-
-	.. code-block:: bat
-
-		export SAGE_ROBOT_LIBRARY=SageRemoteInterface
-
 
 
