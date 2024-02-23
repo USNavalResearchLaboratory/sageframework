@@ -146,6 +146,7 @@ Note that the SDK package is optional and needed only for C++ behavior developme
 or
 
 .. code-block:: bat
+
 	sudo dpkg -i nrl-sage-sdk-*.deb
 	sudo dpkg -i nrl-sage-server-*.deb
 
