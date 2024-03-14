@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAGE Server Application &mdash; SAGE User Guide v3.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=536c50fe" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=30f05f40" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=47f26a0a"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/custom.js?v=4441fbbd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Starting a Server Instance" href="starting_a_server_instance.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SAGE User Guide
+          </a>
+              <div class="version">
+                3.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>SAGE Server Application</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#main-window"><strong>Main Window</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#server-settings"><strong>Server Settings</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#network-tree-view"><strong>Network Tree View</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#network-graph-view"><strong>Network Graph View</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#starting-the-server"><strong>Starting the Server</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#active-server"><strong>Active Server</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-node-manager"><strong>The Node Manager</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id3">**</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">**</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#the-behavior-manager"><strong>The Behavior Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#adding-a-behavior-to-an-agent"><strong>Adding a Behavior to an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#viewing-behavior-properties"><strong>Viewing Behavior Properties</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id9">**</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#removing-a-behavior-from-an-agent"><strong>Removing a Behavior from an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#activating-an-agent"><strong>Activating an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#deactivating-an-agent"><strong>Deactivating an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sending-a-message"><strong>Sending a Message</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id12">**</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#sending-files-to-a-node"><strong>Sending Files to a Node</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#viewing-agent-state-spaces"><strong>Viewing Agent State Spaces</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-sage-robot-interface"><strong>The SAGE Robot Interface</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-log-viewer"><strong>The Log Viewer</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#loading-and-saving-an-agent-network"><strong>Loading and Saving an Agent Network</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Creating Behaviors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Managing Behaviors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Starting Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>SAGE Server Application</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sage_app.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sage-server-application">
+<h1><strong>SAGE Server Application</strong><a class="headerlink" href="#sage-server-application" title="Link to this heading"></a></h1>
+<p>The SAGE Server App provides a graphical user interface for viewing and
+controlling the SAGE runtime environment. SAGE Server App supports the
+following functions:</p>
+<ul class="simple">
+<li><p>Manage behavior modules</p></li>
+<li><p>Start and stop the SAGE server</p></li>
+<li><p>View connected nodes</p></li>
+<li><p>Manage nodes on the local server machine and networked remote
+machines</p></li>
+<li><p>Control node access to the server machine</p></li>
+<li><p>Send files and messages to nodes</p></li>
+<li><p>Create, activate, deactivate and remove agents</p></li>
+<li><p>Send messages to agents</p></li>
+<li><p>Add and remove agent behaviors</p></li>
+<li><p>Select, sequence and run SAGE Robot files</p></li>
+<li><p>View generated Robot reports</p></li>
+<li><p>View SAGE server log output, including behavior execution results</p></li>
+<li><p>Load and Save SAGE networks</p></li>
+</ul>
+<p>SAGE Server App is Windows compatible and distributed with the Windows
+x64 - Server installer.</p>
+<p>To run SAGE Server App, double-click on the shortcut icon, or
+right-click on the icon and select “Open” from the context menu.</p>
+</section>
+<section id="main-window">
+<h1><strong>Main Window</strong><a class="headerlink" href="#main-window" title="Link to this heading"></a></h1>
+<p>Following is an annotated view of the SAGE Server App window when the
+application opens.</p>
+<a class="reference internal image-reference" href="_images/image1.png"><img alt="_images/image1.png" src="_images/image1.png" style="width: 6.5in; height: 6.5375in;" /></a>
+<p>Control Toolstrip</p>
+<p>Provides buttons for:</p>
+<ul class="simple">
+<li><p>Starting and stopping the SAGE Server.</p></li>
+<li><p>Loading and Saving a SAGE network.</p></li>
+<li><p>Configuring Server settings.</p></li>
+<li><p>Displaying information about the SAGE Server and App.</p></li>
+</ul>
+<p>Server Toolstrip</p>
+<p>Provides buttons for viewing and controlling the SAGE network:</p>
+<ul class="simple">
+<li><p>Manage SAGE Nodes on the local Server machine and networked remote
+machines.</p></li>
+<li><p>Manage SAGE Behaviors</p></li>
+<li><p>Launch the SAGE Robot Interface</p></li>
+<li><p>Create and remove Agents</p></li>
+<li><p>Activate and deactivate Agents.</p></li>
+<li><p>Add and remove Behaviors</p></li>
+<li><p>View Behavior properties.</p></li>
+<li><p>Send files to Nodes.</p></li>
+<li><p>Send messages to Nodes and Agents.</p></li>
+<li><p>View Agent State Space</p></li>
+</ul>
+<p>Network View Pane</p>
+<p>Allows you to view and control the SAGE network using the following
+views:</p>
+<ul class="simple">
+<li><p>Network Tree View</p></li>
+<li><p>Network Graph View</p></li>
+</ul>
+<p>Views can be toggled by clicking on the respective tab.</p>
+<p>Logger Toolstrip</p>
+<p>Allows you to interact with server-generated log events.</p>
+<p>Provides buttons for:</p>
+<ul class="simple">
+<li><p>Copying event logs to the Windows clipboard.</p></li>
+<li><p>Clearing logs displayed in the Logger View Pane.</p></li>
+<li><p>Controlling the scrolling of log events when the server is active.</p></li>
+</ul>
+<p>Logger View Pane</p>
+<p>Allows you to view server-generated log events, including behavior
+execution results as they occur in real-time.</p>
+</section>
+<section id="server-settings">
+<h1><strong>Server Settings</strong><a class="headerlink" href="#server-settings" title="Link to this heading"></a></h1>
+<p>Clicking on the Settings button in the Control Toolstrip brings up the
+Server Settings popup dialog.</p>
+<a class="reference internal image-reference" href="_images/image2.png"><img alt="_images/image2.png" src="_images/image2.png" style="width: 6.5in; height: 4.725in;" /></a>
+<p>SAGE Server settings include the following:</p>
+<ul class="simple">
+<li><p>Control Node access to the server machine.</p></li>
+<li><p>Set Server IP port number</p></li>
+<li><p>Set the maximum capacity of the SAGE event logger.</p></li>
+<li><p>Adjusting window overlays.</p></li>
+<li><p>Changing color theme of application.</p></li>
+</ul>
+<p>Node access control is enforced when Enable Node Access Control is
+checked. This allows you to whitelist IP addresses in dot-decimal
+notation. An asterisk may be used as a wildcard character for any of the
+octet-grouped decimal numbers. Only IP addresses listed are allowed to
+connect to the server.</p>
+<p>Setting the maximum capacity of the event logger prevents
+Server-generated log events from overrunning memory when the Server runs
+for very long periods of time (day or even weeks). When the maximum
+capacity is reached, older events are removed to make room for new
+events.</p>
+<p>Settings are automatically saved when the application terminates.</p>
+</section>
+<section id="network-tree-view">
+<h1><strong>Network Tree View</strong><a class="headerlink" href="#network-tree-view" title="Link to this heading"></a></h1>
+<p>The Network Tree View provides a tree view of the SAGE network when the
+Server is active.</p>
+<ul class="simple">
+<li><p>The root of the network tree is the NodeRoot tree-node representing
+the set of all connected SAGE Nodes.</p></li>
+<li><p>SAGE Nodes are shown as branches under the NodeRoot tree-node. Each
+Node has an Agents tree-node representing the set of all Agents
+belonging to the Node.</p></li>
+<li><p>A Node’s Agents are shown as branches under the Agents tree-node.
+Each Agent has a Behaviors tree-node representing the set of all
+Behaviors belonging to the Agent.</p></li>
+<li><p>An Agent’s Behaviors are shown as leaf tree-nodes under the Behaviors
+tree-node.</p></li>
+</ul>
+<p>Clicking on any tree-node selects and highlights it. Tree-nodes
+representing ancestor network entities are also selected.</p>
+<p>Right-clicking on a tree-node displays a set of cascading context menus
+with a set of commands relevant to the current selection.</p>
+<p>You can expand and collapse tree-nodes by clicking on the plus or minus
+sign next to a tree-node branch.</p>
+<p>Double-clicking on a tree-node fully expands a branch if it is
+collapsed, and fully collapses a branch if it is expanded.</p>
+<a class="reference internal image-reference" href="_images/image3.png"><img alt="_images/image3.png" src="_images/image3.png" style="width: 6.5in; height: 5.92569in;" /></a>
+</section>
+<section id="network-graph-view">
+<h1><strong>Network Graph View</strong><a class="headerlink" href="#network-graph-view" title="Link to this heading"></a></h1>
+<p>The Network Graph View provides a dynamic graph display of the SAGE
+network when the Server is active.</p>
+<ul class="simple">
+<li><p>The Server graph-node represents the SAGE Server and is always
+visible when the Server is active.</p></li>
+<li><p>SAGE Nodes are shown as root graph-nodes of their own sub-graphs.</p></li>
+<li><p>Graph-nodes representing Agents are connected to their Node
+graph-node, and graph-nodes representing Behaviors are connected to
+their Agent graph-node.</p></li>
+</ul>
+<p>Clicking on any graph-node selects and highlights it. Graph-nodes
+representing ancestor network entities are also selected.</p>
+<p>Right-clicking on a graph-node displays a set of cascading context menus
+with a set of commands relevant to the selected object.</p>
+<p>Clicking on the Server graph-node or on the view background displays a
+context menu relevant to the entire network.</p>
+<p>You can reposition entities within the graph region by dragging with the
+left mouse button.</p>
+<p>Double-clicking on a graph-node centers the entity within the view pane.</p>
+<p>Double-clicking on the view background centers the graph region about
+that position in the view pane.</p>
+<p>The graph view can be panned by clicking down anywhere in the view pane
+that is not on a graph-node and dragging.</p>
+<a class="reference internal image-reference" href="_images/image4.png"><img alt="_images/image4.png" src="_images/image4.png" style="width: 6.5in; height: 5.92569in;" /></a>
+<p>The graph view can be zoomed out and back in using the mouse wheel. When
+zooming, the scaling is applied about the mouse cursor position.</p>
+<a class="reference internal image-reference" href="_images/image5.png"><img alt="_images/image5.png" src="_images/image5.png" style="width: 6.5in; height: 5.92569in;" /></a>
+</section>
+<section id="starting-the-server">
+<h1><strong>Starting the Server</strong><a class="headerlink" href="#starting-the-server" title="Link to this heading"></a></h1>
+<p>Click the Start button or the Load Network button in the Control
+Toolstrip to start the Server instance. After the Server has started,
+any previously created Nodes will be connected and displayed in the
+Network View Pane.</p>
+<p>If the Server is started using the Load Network button, a previously
+saved Agent network is loaded. Nodes specified in the Agent network
+which are not already running will be started.</p>
+<p>Once the Server becomes active, the Start button changes to a Stop
+button and the Load Network button changes to a Save Network button. The
+Server can be stopped at any time by clicking the Stop button.</p>
+</section>
+<section id="active-server">
+<h1><strong>Active Server</strong><a class="headerlink" href="#active-server" title="Link to this heading"></a></h1>
+<p>When the Server is active, the current state of the network is reflected
+in the Server Toolstrip and the Network View Pane.</p>
+<p>The following screenshot shows an active Server network, with the
+Network Tree View displayed in the view pane. <a class="reference internal" href="_images/image6.png"><img alt="image1" src="_images/image6.png" style="width: 6.5in; height: 5.92569in;" /></a></p>
+<p>Clicking on the Network Graph View tab displays a graph-based view of
+the network.</p>
+<a class="reference internal image-reference" href="_images/image7.png"><img alt="_images/image7.png" src="_images/image7.png" style="width: 6.5in; height: 5.92569in;" /></a>
+<p>Nodes, their Agents and agent Behaviors are selected using either the
+ServerToolstrip or Network View Pane.</p>
+<p>Commands operate on the current selection and are accessible from either
+the Server Toolstrip or Network View Pane context menus.</p>
+<p>On the Server Toolstrip, node-related commands are under the Node
+dropdown button, agent-related commands are under the Agent dropdown
+button, and behavior-related commands are under the Behavior dropdown
+button.</p>
+<a class="reference internal image-reference" href="_images/image8.png"><img alt="_images/image8.png" src="_images/image8.png" style="width: 5.4253in; height: 6.71875in;" /></a>
+<p>When an individual Node, Agent or Behavior is not selected, the
+corresponding dropdown button will display “(All Nodes)”, “(All
+Agents)”, or “(All Behaviors)”, and the commands will apply to all
+objects of that type.</p>
+<p>In the image above, clicking the agent Activate button on the Server
+Toolstrip activates all inactive agents on all nodes in the network.</p>
+<p>The image below shows how to perform the same operation using the
+Network View Pane:</p>
+<ol class="arabic simple">
+<li><p>Right-click on one of the following to display the Network View Pane
+context menu:</p></li>
+</ol>
+<ul class="simple">
+<li><p>NodeRoot in the Network Tree View.</p></li>
+<li><p>The Server graph-node in the Network Graph View.</p></li>
+<li><p>The panel background in the Network Graph View.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Move the mouse over (All Nodes) to display the cascading node context
+menu.</p></li>
+<li><p>Move the mouse over (All Agents) to display the cascading agent
+context menu.</p></li>
+<li><p>Click the Activate button on the agent context menu.</p></li>
+</ol>
+<p><a class="reference internal" href="_images/image9.png"><img alt="image2" src="_images/image9.png" style="width: 3.19792in; height: 2.73701in;" /></a><a class="reference internal" href="_images/image10.png"><img alt="image3" src="_images/image10.png" style="width: 3.09375in; height: 2.72168in;" /></a></p>
+<p>Notice that commands in the cascading context menus match the commands
+in the Server Toolstrip.</p>
+<p>In the Network Graph View, icons representing the newly activated Agents
+change color from red (inactive) to green (active), and dynamic
+messaging lines show the flow of messages sent between Agents.</p>
+<a class="reference internal image-reference" href="_images/image11.png"><img alt="_images/image11.png" src="_images/image11.png" style="width: 6.5in; height: 5.875in;" /></a>
+<p>Click on the agent Deactivate button to deactivate all the Agents.</p>
+<p><strong>Selecting a SAGE Node, Agent or Behavior</strong></p>
+<p>A SAGE object (Node, Agent or Behavior) can be selected from the Server
+Toolstrip or the Network View Pane.</p>
+<p>To select a Node, Agent or Behavior from the Network View Pane, click on
+the corresponding tree-node or graph-node.</p>
+<p>To select a Node, Agent or Behavior from the Server Toolstrip, click on
+the corresponding dropdown button and select the object’s name from the
+popup combo box, as shown below.</p>
+<a class="reference internal image-reference" href="_images/image12.png"><img alt="_images/image12.png" src="_images/image12.png" style="width: 3.89638in; height: 4.7715in;" /></a>
+<p>The current selection is reflected in both the Server Toolstrip and
+Network View Pane (Tree View or Graph View).</p>
+<p>The mechanism for selecting SAGE objects and applying commands is
+enforced by the topology of the Network Tree View and Graph View and by
+the Server Toolstrip menu items.</p>
+<p>In the screen shot below, NodeFive is selected, but no Agent or Behavior
+has been selected.</p>
+<ul class="simple">
+<li><p>The node-related commands apply to NodeFive.</p></li>
+<li><p>The agent-related commands apply to all the NodeFive Agents.</p></li>
+<li><p>The behavior-related commands apply to all the Behaviors on all the
+NodeFive Agents.</p></li>
+</ul>
+<p><a class="reference internal" href="_images/image13.png"><img alt="image4" src="_images/image13.png" style="width: 3.23891in; height: 3.23194in;" /></a><a class="reference internal" href="_images/image14.png"><img alt="image5" src="_images/image14.png" style="width: 3.21875in; height: 3.23274in;" /></a></p>
+<p>The Server Toolstrip can be very useful when managing networks with a
+large number of Nodes or Agents.</p>
+<p>In the following screenshot, the network has a single Node with 50
+Agents. Selecting an Agent using the Server Toolstrip is much easier
+than trying to locate and select the Agent using either of the Network
+Views.</p>
+<a class="reference internal image-reference" href="_images/image15.png"><img alt="_images/image15.png" src="_images/image15.png" style="width: 6.5in; height: 4.10208in;" /></a>
+<p>The number of Agent names to scroll through in the toolstrip combo box
+can be reduced by entering the first few letters of the name (e.g. “A2”)
+in the combo box edit control.</p>
+</section>
+<section id="the-node-manager">
+<h1><strong>The Node Manager</strong><a class="headerlink" href="#the-node-manager" title="Link to this heading"></a></h1>
+<p>Use the SAGE Node Manager to start and stop Containerized and
+NonContainerized Nodes on the Local Host computer, and containerized
+nodes on networked Remote Host computers. SAGE Nodes can be started and
+stopped at any time, even when the Server is inactive.</p>
+<p>The Node Manager is opened by clicking on the Node Manager button on the
+Server Toolstrip or the Network View Pane context menu (when selecting
+the NodeRoot in the Tree View or the Server graph-node or panel
+background in the Graph View) .</p>
+<a class="reference internal image-reference" href="_images/image16.png"><img alt="_images/image16.png" src="_images/image16.png" style="width: 6.5in; height: 4.34236in;" /></a>
+<p>The Network Tree at the left displays the current host network (the
+Local Host and any managed Remote Hosts) and the SAGE nodes running on
+each Host. The Information Pane at the right displays information about
+the selected Node or Host tree-node.</p>
+<p>A Host is in the connected state if its icon is blue; a gray icon
+indicates the Host is currently not connected. A Remote Host is
+identified by its name if the name was supplied when the Remote Host was
+added, otherwise the Remote Host is identified using its IPv4 address.</p>
+<p>Nodes may be Containerized (running in a Docker container) or
+NonContainerized (running as a process on the host computer). The icon
+for Containerized Nodes is a “bulls-eye”, whereas the icon for
+NonContainerized Nodes is a singe solid circle. Both Containerized and
+NonContainerized Nodes may be started on the Local Host, however, only
+Containerized Nodes may be started on a Remote Host.</p>
+<p>The Node Manager displays only “Managed” Hosts and their Nodes. Managed
+Hosts include the Local Host and any Remote Hosts which were added to
+the Node Network by resolving their connectivity using SSH key-based
+authentication. Managed Nodes include Containerized and NonContainerized
+Nodes that were started by the Node Manager, as well as any
+Containerized Nodes that were independently started (outside of the App)
+on the Local Host or any of the currently connected Managed Remote
+Hosts.</p>
+<p>Note that a Managed Remote Host may not be in a connected state at a
+given point in time, and that no Nodes will be displayed for a
+disconnected Remote Host.</p>
+<p>“Unmanaged” Nodes are Nodes which do not appear in the Node Manager
+Network, but which may be connected to the active Server and displayed
+in the SAGE Server App Network View Pane. These include NonContainerized
+Nodes started outside of the App on the Local Host or a Remote Host, as
+well as any Containerized Nodes running on an Unmanaged Remote Host.</p>
+<p>Node Manger Settings</p>
+<p>Clicking on the Settings button in the Node Manager menu brings up the
+Node Manager Settings popup dialog.</p>
+<a class="reference internal image-reference" href="_images/image17.png"><img alt="_images/image17.png" src="_images/image17.png" style="width: 4.52146in; height: 4.40686in;" /></a>
+<p>Node Manager settings include the following:</p>
+<ul class="simple">
+<li><p>Default Node Scheduler Timer Precision.</p></li>
+<li><p>Option to start a Local NonContainerized Node in a console window.</p></li>
+<li><p>Node View Refresh Period to set the frequency for refreshing the Node
+Network.</p>
+<ul>
+<li><p>The Node Network can be refreshed manually at any time by clicking
+on the Refresh button (curved arrow icon) on the Node Manager menu
+strip.</p></li>
+</ul>
+</li>
+<li><p>Node Image Registry for pulling SAGE Docker images.</p></li>
+</ul>
+<p>Node Manager: Adding a Remote Host</p>
+<p>To add a Remote Host to the Node Network:</p>
+<ol class="arabic simple">
+<li><p>Select the “SAGE Nodes” tree-node.</p></li>
+<li><p>Bring up the “SAGE Nodes” context menu by right-clicking on the SAGE
+Nodes tree-node or left-clicking on the Manage menu button (icon with
+three horizontal bars).</p></li>
+<li><p>Click the Add Managed Remote Host command.</p></li>
+<li><p>In the popup dialog, enter the Username and Host ID for logging onto
+the remote host (using previously configured SSH key-based
+authentication).</p>
+<ul class="simple">
+<li><p>The Host ID can be either the name of the remote host or its IPv4
+address.</p></li>
+</ul>
+</li>
+<li><p>Click the Test Connection button to resolve the Host ID.</p></li>
+<li><p>If the connection was successful, click Ok to confirm the command, or
+Cancel to cancel the operation.</p></li>
+</ol>
+<p><a class="reference internal" href="_images/image18.png"><img alt="image6" src="_images/image18.png" style="width: 2.99283in; height: 3.89583in;" /></a><a class="reference internal" href="_images/image19.png"><img alt="image7" src="_images/image19.png" style="width: 2.95833in; height: 3.87056in;" /></a></p>
+<p>In additon to the Add Managed Remote Host command, the “SAGE Nodes”
+context menu also includes commands to Remove All Managed Remote Hosts
+and Stop All Managed Nodes. The Node Manager always requests
+confirmation before removing a Remote Host.</p>
+<section id="id3">
+<h2><a href="#id1"><span class="problematic" id="id2">**</span></a><a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Node Manager: Removing a Remote Host</p>
+<p>To remove a Remote Host from the Node Network:</p>
+<ol class="arabic simple">
+<li><p>Select the Remote Host tree-node.</p></li>
+<li><p>Bring up the Remote Host context menu by right-clicking on the Remote
+Host tree-node or left-clicking on the Manage menu button.</p></li>
+<li><p>Click Remove Managed Host to remove the Remote Host.</p></li>
+</ol>
+<p>To remove all Managed Remote Hosts from the Node Network:</p>
+<ul class="simple">
+<li><p>Select Remove All Managed Remote Hosts from the “SAGE Nodes” context
+menu.</p></li>
+</ul>
+<p>The Node Manager will always request confirmation before removing a
+Remote Host.</p>
+<p>Node Manager: Pulling a Docker Image to a Host</p>
+<p>Two conditions are required to start a Containerized Node on a Managed
+Host: Docker must be installed and running, and the Docker sagenode
+image for the current SAGE version (e.g., sagenode:3.0.3) must be
+present on the Host. When a Host is selected in the Network Tree, the
+Docker Running and Docker Image check boxes in the Information Pane
+indicate if these conditions have been met. If Docker is running but the
+sagenode image is missing, the Host context menu provides a command for
+pulling the image from the Sage Node Image Repository specified in the
+Settings dialog.</p>
+<p>To pull a Docker sagenode image:</p>
+<ol class="arabic simple">
+<li><p>Select the Host tree-node.</p></li>
+<li><p>Bring up the Host context menu by right-clicking on the Host
+tree-node or left-clicking on the Manage menu button.</p></li>
+<li><p>Click Pull Image to initiate the pull operation.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/image20.png"><img alt="_images/image20.png" src="_images/image20.png" style="width: 5.57292in; height: 3.71468in;" /></a>
+<p>The pull operation can be lengthy, especially if this is the first time
+a sagenode image has been pulled to this Host. While the pull is in
+progress the Host context menu provides a means of cancelling the
+operation. When the pull is complete, the pull items are removed from
+the context menu and the Docker Image checkbox will be checked.</p>
+<a class="reference internal image-reference" href="_images/image21.png"><img alt="_images/image21.png" src="_images/image21.png" style="width: 5.56965in; height: 3.72917in;" /></a>
+<p>Node Manager: Starting a Node</p>
+<p>To start a Node on the Local Host or a Remote Host:</p>
+<ol class="arabic simple">
+<li><p>Select the Host tree-node (Local Host or a Remote Host).</p></li>
+<li><p>Bring up the Host context menu by right-clicking on the Host
+tree-node or left-clicking on the Manage menu button.</p></li>
+<li><p>Click Start Containerized Node to start a containerized Node, or
+Start NonContainerized Node (Local Host only) to start a
+nonContainerized Node.</p>
+<ul class="simple">
+<li><p>Start Containerized Node is enabled if Docker is running and the
+required Docker sagenode image is available on the Host system.</p></li>
+<li><p>Start NonContainerized Node is available only on the Local Host
+context menu and is enabled if SAGE Node is installed on the local
+system.</p></li>
+</ul>
+</li>
+<li><p>In the popup dialog, enter the Node name and select the desired
+Scheduler Timer Precision (High, Medium or Low).</p></li>
+<li><p>Click Ok to confirm the command, or Cancel to cancel the operation.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/image22.png"><img alt="_images/image22.png" src="_images/image22.png" style="width: 3.53125in; height: 5.10069in;" /></a>
+<p>The newly created Node will appear beneath the Host tree-node in the
+Network Tree. For a local nonContainerized Node, a SageNodeConsole
+console window will be displayed on the desktop if that option was
+enabled in the Node Manager settings.</p>
+<p>If the Server is active, the Node will connect to the Server and be
+displayed in the SAGE Server App Network View Pane. If the Server is
+inactive, the Node instance will connect after the Server is started.</p>
+<p>Node Manager: Stopping a Node</p>
+<p>To stop a Node on the Local Host or a Remote Host:</p>
+<ol class="arabic simple">
+<li><p>Select the Node tree-node.</p></li>
+<li><p>Bring up the Node context menu by right-clicking on the Node
+tree-node or left-clicking on the Manage menu button.</p></li>
+<li><p>Click Stop Node to initiate Node termination.</p>
+<ul class="simple">
+<li><p>A NonContainerized Node will normally stop immediately, however, a
+Containerized Node can take a number of seconds to stop. The icon
+color changes to red to indicate that the Node is in the process
+of terminating. Upon termination, the Node is removed from the
+Node Network.</p></li>
+</ul>
+</li>
+</ol>
+<p>To stop all Nodes on a single Host or the entire Network:</p>
+<ul class="simple">
+<li><p>Select Stop All Managed Nodes on a Host context menu to stop all
+Managed Nodes on that Host.</p></li>
+<li><p>Select Stop All Managed Nodes on the “SAGE Nodes” context menu to
+stop all Managed Nodes on the Network.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2><a href="#id4"><span class="problematic" id="id5">**</span></a><a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+</section>
+</section>
+<section id="the-behavior-manager">
+<h1><strong>The Behavior Manager</strong><a class="headerlink" href="#the-behavior-manager" title="Link to this heading"></a></h1>
+<p>Use the Behavior Manager to view and update installed Behaviors.</p>
+<p>The Behavior Manager is opened by clicking on the Behavior Manager
+button on the Server Toolstrip.</p>
+<a class="reference internal image-reference" href="_images/image23.png"><img alt="_images/image23.png" src="_images/image23.png" style="width: 6.5in; height: 4.34514in;" /></a>
+<p>The Behavior Tree on the left shows the currently installed behavior
+modules and their Behaviors.</p>
+<p>The Behavior Information Pane on the right contains information about a
+Behavior when its corresponding tree-node is selected.</p>
+<p>Tree-nodes at the first three levels represent hierarchical colletions
+of behavior module types, classified by language and target environment.</p>
+<blockquote>
+<div><p>Under Managed are the currently supported Managed Behavior Types:
+“Java”, “JavaScript” and “Python”.</p>
+<p>Under Native are the currently supported Native Behavior Types:
+“Linux32”, “Linux64”, “Windows32” and “Windows64” (32-bit and 64-bit
+Windows and Linux modules).</p>
+</div></blockquote>
+<p>Under each Behavior Type tree-node are tree-nodes representing the
+installed Behavior Modules for that type.</p>
+<blockquote>
+<div><p>The file extensions correspond to the Behavior Type, e.g., “.jar” for
+Java, “.py” or “.egg” for Python, “.so” for Linux32 and Linux64, and
+“.dll” for Windows32 and Windows64.</p>
+</div></blockquote>
+<p>Under each Behavior Module tree-node is the leaf tree-node representing
+that module’s Behavior. When a Behavior tree-node is selected,
+information about that Behavior is displayed in the Behavior Information
+Pane.</p>
+<p>Management capabilities include adding and deleting Behavior Modules,
+and refreshing the Behavior Tree to synchronize the Behavior Tree with
+the SAGE Behavior repository.</p>
+<p>Behavior Manager: Adding a Behavior module</p>
+<p>To add a Behavior Module from the respoitory:</p>
+<ol class="arabic simple">
+<li><p>Select an appropriate tree-node from one of the first three levels
+(Behaviors, Managed, Native, or one of the Behavior Types).</p>
+<ul class="simple">
+<li><p>Selecting a lower-level tree node restricts the types of modules
+to add, e.g., selecting the Java Behavior Type will only allow
+adding Java Behavior Modules.</p></li>
+</ul>
+</li>
+<li><p>Bring up the associated context menu by right-clicking on the
+selected tree-node or left-clicking on the Manage menu button (icon
+with three horizontal lines).</p></li>
+<li><p>Click Add Module to display a File Open dialog. Navigate to the
+desired folder and select one or more Behavior Module files to open.</p></li>
+</ol>
+<p>When a Behavior Module is added, the file is automatically added to the
+proper SAGE Behavior repository sub-directory.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Behavior Type</p></th>
+<th class="head"><p>Behavior Path</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Java</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\Java</p></td>
+</tr>
+<tr class="row-odd"><td><p>JavaScript</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\JavaScript</p></td>
+</tr>
+<tr class="row-even"><td><p>Python</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\Python</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows32</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\Windows32</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows64</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\Windows64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux32</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\Linux32</p></td>
+</tr>
+<tr class="row-even"><td><p>Linux64</p></td>
+<td><p>C:\ProgramData\Sage\behaviors\Linux64</p></td>
+</tr>
+</tbody>
+</table>
+<p>Behavior Manager: Removing a Behavior module</p>
+<p>To remove a Behavior Module from the respoitory:</p>
+<ol class="arabic simple">
+<li><p>Select the Behavior Module tree-node.</p></li>
+<li><p>Bring up the Behavior Module context menu by right-clicking on the
+selected tree-node or left-clicking on the Manage menu button.</p></li>
+<li><p>Click Delete Module to remove the Behavior Module file from the SAGE
+Behavior repository.</p>
+<ul class="simple">
+<li><p>The Node Manager will request confirmation before completing the
+action.</p></li>
+</ul>
+</li>
+</ol>
+<p>Behavior Manager: Refreshing the Behavior Tree</p>
+<p>Click the Refresh Behavior Tree menu button (circular arrow icon) to
+synchronize the behavior tree with the SAGE Behavior repository. This is
+only required when behaviors are installed or uninstalled from the
+repository outside of the App while the Behavior Manager window is open.</p>
+<p>The Behavior Tree is automatically refreshed whenever the Behavior
+Manager is opened.</p>
+<p>The Behavior Manager is available when the Server is both active and
+inactive and can remain open while the user interacts with the App’s
+main form window.</p>
+<blockquote>
+<div><p><strong>Creating an Agent</strong></p>
+</div></blockquote>
+<hr class="docutils" />
+<p>Agents can be created on Nodes when the Server is active.</p>
+<p>To create an Agent on one or more Nodes:</p>
+<ol class="arabic simple">
+<li><p>Select the Node(s) from the Server Toolstrip or Network View Pane.</p>
+<ul class="simple">
+<li><p>Select a Node to create the Agent on just that Node.</p></li>
+<li><p>Select (All Nodes) to create the Agent on all SAGE nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Create Agent from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+<li><p>Enter the Agent’s name in the popup dialog.</p></li>
+<li><p>Click Ok to confirm the command, or Cancel to cancel the operation.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/image24.png"><img alt="_images/image24.png" src="_images/image24.png" style="width: 4.22976in; height: 1.51063in;" /></a>
+<p>If the agent already exists on a Node, the agent will not be created on
+that Node.</p>
+</section>
+<section id="adding-a-behavior-to-an-agent">
+<h1><strong>Adding a Behavior to an Agent</strong><a class="headerlink" href="#adding-a-behavior-to-an-agent" title="Link to this heading"></a></h1>
+<p>Behaviors can be added to Agents when the Server is active.</p>
+<p>To add a Behavior to one or more Agents:</p>
+<ol class="arabic simple">
+<li><p>Select the Agent(s) from the Server Toolstrip or Network View Pane.</p>
+<ul class="simple">
+<li><p>Select an Agent to add the Behavior to just that Agent.</p></li>
+<li><p>Select a Node to add the Behavior to all Agents of that Node.</p></li>
+<li><p>Select (All Nodes) to add the Behavior to all Agents of all the
+Nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Add Behavior from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+<li><p>Select the Behavior from the Behavior Tree.</p></li>
+<li><p>Click Ok to confirm or Cancel to cancel the operation.</p>
+<ul class="simple">
+<li><p>You can also confirm by right-clicking the Behavior and selecting
+Select Behavior.</p></li>
+</ul>
+</li>
+</ol>
+<a class="reference internal image-reference" href="_images/image25.png"><img alt="_images/image25.png" src="_images/image25.png" style="width: 6.26042in; height: 4.18498in;" /></a>
+<p>If confirmed, the following popup dialog will appear:</p>
+<a class="reference internal image-reference" href="_images/image26.png"><img alt="_images/image26.png" src="_images/image26.png" style="width: 3.97917in; height: 3.54472in;" /></a>
+<p>To specify topics for the Behavior:</p>
+<ol class="arabic simple">
+<li><p>Enter the desired behavior topic strings. If topics have been added
+to a previous Behavior, button Paste Previous Topics will be enabled.
+Clicking this button will automatically add the previous topics to
+this behavior.</p></li>
+<li><p>Click Ok to continue or Cancel to continue without adding a topic.</p></li>
+</ol>
+<p>If the behavior already belongs to an Agent, the behavior will not be
+added to that Agent.</p>
+</section>
+<section id="viewing-behavior-properties">
+<h1><strong>Viewing Behavior Properties</strong><a class="headerlink" href="#viewing-behavior-properties" title="Link to this heading"></a></h1>
+<p>To view the properties of a Behavior:</p>
+<ol class="arabic simple">
+<li><p>Select the Behavior from the Server Toolstrip or the Network View
+Pane.</p></li>
+<li><p>Click Show Properties from the Server Toolstrip or the Network View
+Pane context menu.</p></li>
+</ol>
+<p>The Behavior Properties include the information provided by the Behavior
+Manager as well as any Behavior Topics assigned when the Behavior was
+added to the Agent.</p>
+<p>The Behavior Properties windows remains visible until the user closes it
+or the Behavior becomes unselected in the Server Toolstrip or Network
+View Pane.</p>
+<section id="id9">
+<h2><a href="#id7"><span class="problematic" id="id8">**</span></a><a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+</section>
+</section>
+<section id="removing-a-behavior-from-an-agent">
+<h1><strong>Removing a Behavior from an Agent</strong><a class="headerlink" href="#removing-a-behavior-from-an-agent" title="Link to this heading"></a></h1>
+<p>Behaviors can be removed from Agents when the Server is active.</p>
+<p>To remove one or more Behaviors using the Remove command:</p>
+<ol class="arabic simple">
+<li><p>Select the Behavior(s) from the Server Toolstrip or the Network View
+Pane.</p>
+<ul class="simple">
+<li><p>Select the Behavior to remove just that Behavior.</p></li>
+<li><p>Select an Agent to remove all Behaviors from the Agent.</p></li>
+<li><p>Select a Node to remove all Behaviors from all Agents of the Node.</p></li>
+<li><p>Select (All Nodes) to remove all Behavior from all Agents of all
+the Nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Remove from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+</ol>
+<p>To remove one or more instances of a named Behavior using the Remove
+Behavior command:</p>
+<ol class="arabic simple">
+<li><p>Select the Agent(s) having the named Behavior from the Server
+Toolstrip or the Network View Pane.</p>
+<ul class="simple">
+<li><p>Select an Agent which has the named Behavior.</p></li>
+<li><p>Select a Node having at least one Agent which has the named
+Behavior.</p></li>
+<li><p>Select (All Nodes) – assumes a Network having at least one Agent
+which has the named Behavior.</p></li>
+</ul>
+</li>
+<li><p>Click Remove Behavior from the Server Toolstrip or the Network View
+Pane context menu, then select the Behavior name from the popup combo
+box.</p></li>
+</ol>
+</section>
+<section id="activating-an-agent">
+<h1><strong>Activating an Agent</strong><a class="headerlink" href="#activating-an-agent" title="Link to this heading"></a></h1>
+<p>Inactive agents can be activated when the Server is active.</p>
+<p>To activate one or more Agents using the Activate command:</p>
+<ol class="arabic simple">
+<li><p>Select the Agent(s) from the Server Toolstrip or the Network View
+Pane.</p>
+<ul class="simple">
+<li><p>Select the Agent to activate just that Agent.</p></li>
+<li><p>Select a Node to activate all Agents of that Node.</p></li>
+<li><p>Select (All Nodes) to activate all Agents of all the Nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Activate from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+</ol>
+<p>To activate one or more instances of a named Agent using the Activate
+Agent command:</p>
+<ol class="arabic simple">
+<li><p>Select the Node(s) having the named Agent from the Server Toolstrip
+or the Network View Pane.</p>
+<ul class="simple">
+<li><p>Select a Node which has the named Agent.</p></li>
+<li><p>Select (All Nodes) – assumes a Network having at least one Node
+which has the named Agent.</p></li>
+</ul>
+</li>
+<li><p>Click Activate Agent from the Server Toolstrip or the Network View
+Pane context menu, then select the Agent name from the popup combo
+box.</p></li>
+</ol>
+</section>
+<section id="deactivating-an-agent">
+<h1><strong>Deactivating an Agent</strong><a class="headerlink" href="#deactivating-an-agent" title="Link to this heading"></a></h1>
+<p>Active agents can be deactivated when the Server is active.</p>
+<p>To deactivate one or more Agents using the Deactivate command:</p>
+<ol class="arabic simple">
+<li><p>Select the Agent(s) from the Server Toolstrip or the Network View
+Pane.</p>
+<ul class="simple">
+<li><p>Select the Agent to deactivate just that Agent.</p></li>
+<li><p>Select a Node to deactivate all Agents of that Node.</p></li>
+<li><p>Select (All Nodes) to deactivate all Agents of all the Nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Deactivate from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+</ol>
+<p>To deactivate one or more instances of a named Agent using the
+Deactivate Agent command:</p>
+<ol class="arabic simple">
+<li><p>Select the Node(s) having the named Agent from the Server Toolstrip
+or the Network View Pane.</p>
+<ul class="simple">
+<li><p>Select a Node which has the named Agent.</p></li>
+<li><p>Select (All Nodes) – assumes a Network havnig at least one Node
+which has the named Agent.</p></li>
+</ul>
+</li>
+<li><p>Click Deactivate Agent from the Server Toolstrip or the Network View
+Pane context menu, then select the Agent name from the popup combo
+box.</p></li>
+</ol>
+</section>
+<section id="sending-a-message">
+<h1><strong>Sending a Message</strong><a class="headerlink" href="#sending-a-message" title="Link to this heading"></a></h1>
+<p>The Send Message command allows the user to send a message from the SAGE
+server to one or more Nodes and their Agents when the Server is active.</p>
+<p>To send a message:</p>
+<ol class="arabic simple">
+<li><p>Select the target Node(s) and Agents(s) from the Server Toolstrip or
+the Network View Pane.</p>
+<ul class="simple">
+<li><p>Select an Agent to send a message to just the Agent and its Node.</p></li>
+<li><p>Select a Node to send a message to the Node and all its Agents.</p></li>
+<li><p>Select (All Nodes) to send a message to all the Nodes and all
+their Agents.</p></li>
+</ul>
+</li>
+<li><p>Click Send Message from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+<li><p>In the Send Message dialog, enter the message text, topic and any
+data items.</p></li>
+<li><p>Click Ok to confirm, or Cancel to cancel the operation.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/image27.png"><img alt="_images/image27.png" src="_images/image27.png" style="width: 3.6113in; height: 5.16667in;" /></a>
+<p>Message sending is graphically depicted in the Network Graph View.
+Messages are shown traveling from the source (in this case the Server)
+to one or more destinations (in this case Node1 and all its Agents).</p>
+<a class="reference internal image-reference" href="_images/image28.png"><img alt="_images/image28.png" src="_images/image28.png" style="width: 6.5in; height: 5.68056in;" /></a>
+<p>The source entity is highlighted with a large rectangle and the
+destination entity are highlighted with small rectangles.</p>
+<p>Server messages (generated using the Send Message command) are shown in
+orange.</p>
+<p>Agent messages (generated by agent Behaviors) are shown in light blue.</p>
+<section id="id12">
+<h2><a href="#id10"><span class="problematic" id="id11">**</span></a><a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+</section>
+</section>
+<section id="sending-files-to-a-node">
+<h1><strong>Sending Files to a Node</strong><a class="headerlink" href="#sending-files-to-a-node" title="Link to this heading"></a></h1>
+<p>The Send File command allows the user to send a file from the SAGE
+server to one or more Nodes when the Server is active.</p>
+<p>To send a file:</p>
+<ol class="arabic simple">
+<li><p>Select the Node(s) from the Server Toolstrip or the Network View
+Pane.</p>
+<ul class="simple">
+<li><p>Select a Node to send the file to just that Node.</p></li>
+<li><p>Select (All Nodes) to send a file to all the Nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Send File from the Server Toolstrip or the Network View Pane
+context menu.</p></li>
+<li><p>Navigate to the desired folder and select the file to send.</p></li>
+<li><p>Click Open to confirm, or Cancel to cancel the operation.</p></li>
+</ol>
+<p>A sub-folder with the same name as the Node will be created (if it does
+not already exist) in the SAGE data directory on the targeted Node
+machine where the sent files will be copied to.</p>
+<p>“<em>C:\ProgramData\Sage\data\NodeName”</em></p>
+</section>
+<section id="viewing-agent-state-spaces">
+<h1><strong>Viewing Agent State Spaces</strong><a class="headerlink" href="#viewing-agent-state-spaces" title="Link to this heading"></a></h1>
+<p>Every SAGE agent has a State Space which includes the following
+information:</p>
+<ul class="simple">
+<li><p>Agent name</p></li>
+<li><p>Node name</p></li>
+<li><p>The “sageHome” directory</p></li>
+<li><p>The “sageNodeHome” directory</p></li>
+</ul>
+<p>An active Agent can have additional named States which are created and
+managed by one or more of its Behaviors.</p>
+<p>To view the State Space for one or more Agents:</p>
+<ol class="arabic simple">
+<li><p>Select the Agent(s) from the Server Toolstrip or Network View Pane.</p>
+<ul class="simple">
+<li><p>Select an Agent to view its State Space.</p></li>
+<li><p>Select a Node to display the State Spaces of all Agents on the
+Node.</p></li>
+<li><p>Select (All Nodes) to display the State Spaces of all Agents on
+all SAGE nodes.</p></li>
+</ul>
+</li>
+<li><p>Click Show State Space from the Server Toolstrip or the Network View
+Pane context menu.</p>
+<ul class="simple">
+<li><p>If the State Space is already open, this will bring it to the
+foreground.</p></li>
+</ul>
+</li>
+</ol>
+<p>The Agent State Space below shows a number of additional states which
+were created and are dynamically managed by the Agent’s Behavior.</p>
+<a class="reference internal image-reference" href="_images/image29.png"><img alt="_images/image29.png" src="_images/image29.png" style="width: 6.49049in; height: 5.50077in;" /></a>
+<p>To hide open Agent State Space(s), either click the State Space window’s
+Close button or do the following:</p>
+<ol class="arabic simple">
+<li><p>Select the Agent(s) from the Server Toolstrip or Network View Pane.</p>
+<ul class="simple">
+<li><p>Select an Agent to hide its State Space.</p></li>
+<li><p>Select a Node to hide the State Spaces of all Agents on the Node.</p></li>
+<li><p>Select (All Nodes) to hide the State Spaces of all Agents on all
+SAGE nodes in the foreground.</p></li>
+</ul>
+</li>
+<li><p>Click Hide State Space from the Server Toolstrip or the Network View
+Pane context menu.</p></li>
+</ol>
+</section>
+<section id="the-sage-robot-interface">
+<h1><strong>The SAGE Robot Interface</strong><a class="headerlink" href="#the-sage-robot-interface" title="Link to this heading"></a></h1>
+<p>The SAGE Robot Interface allows you to run Robot scripts and view the
+results from within the SAGE Server App.</p>
+<p>Click the Robot Interface button on the Server Toolstrip to start a new
+instance of the SAGE Robot Interface, as shown below.</p>
+<a class="reference internal image-reference" href="_images/image30.png"><img alt="_images/image30.png" src="_images/image30.png" style="width: 6.5in; height: 7.69931in;" /></a>
+<p>At the top of the window are controls to select and sequence the Robot
+script files.</p>
+<p>Robot scripts are added, removed and sequenced using the buttons to the
+right of the Robot scripts list.</p>
+<p>The Add and Remove operations are also available from the File menu.</p>
+<p>To run a Robot script:</p>
+<ol class="arabic simple">
+<li><p>Open Robot Interface</p></li>
+<li><p>Click the Add button .</p></li>
+<li><p>Select the Robot file and click Open.</p></li>
+<li><p>Repeat steps 1 and 2 to add additional Robot scripts.</p></li>
+<li><p>Click the Start button to start the run.</p></li>
+</ol>
+<p>The Robot scripts will be run one at a time in the sequence specified.</p>
+<p>Clicking the Stop button will abort the run.</p>
+<p>When a Robot script successfully completes, the pathname of the
+generated report file appears in the report list at the bottom of the
+window.</p>
+<a class="reference internal image-reference" href="_images/image31.png"><img alt="_images/image31.png" src="_images/image31.png" style="width: 6.5in; height: 7.69931in;" /></a>
+<p>To view a report, select it from the report list and click the Report
+button located in the bottom-right corner. You may also right-click the
+report pathname and select View Report from the context menu.</p>
+</section>
+<section id="the-log-viewer">
+<h1><strong>The Log Viewer</strong><a class="headerlink" href="#the-log-viewer" title="Link to this heading"></a></h1>
+<p>The display of Server-generated log events are handled by the Log
+Viewer.</p>
+<p>The types of log events include exceptions, errors, warning,
+informational messages, and behavior execution results.</p>
+<p>By default a single-line header is displayed showing the timestamp,
+event type, and a brief description.</p>
+<a class="reference internal image-reference" href="_images/image32.png"><img alt="_images/image32.png" src="_images/image32.png" style="width: 6.5in; height: 5.93681in;" /></a>
+<p>Message and result events can be expanded to show additional
+information.</p>
+<p>Only one log event can be expanded at a time.</p>
+<p>The Logger Toolstrip provides buttons for copying log events to the
+Windows clipboard and for clearing the Log Viewer. These commands are
+also available on the context menu displayed when right-clicking on a
+log event.</p>
+<p>When the Server is stopped, currently displayed event logs remain.</p>
+<p>All events, including removed events, are saved to a log data file
+located in <em>C:\ProgramData\SAGE\logs</em>.</p>
+</section>
+<section id="loading-and-saving-an-agent-network">
+<h1><strong>Loading and Saving an Agent Network</strong><a class="headerlink" href="#loading-and-saving-an-agent-network" title="Link to this heading"></a></h1>
+<p>Agent network configurations can be saved and loaded. The files are
+saved as two JSON files with a common base filename and the extensions
+“.sage” and “.sagenode”.</p>
+<ul class="simple">
+<li><p>The Node Network JSON file has extension “.sagenode” and is used by
+the SAGE Node Manager to start the Managed Nodes.</p>
+<ul>
+<li><p>Node networks can be independently loaded and saved from the Node
+Manager using the Load Managed Nodes and Save Managed Nodes
+menu buttons, even when the Server is inactive.</p></li>
+</ul>
+</li>
+<li><p>The Agent Network JSON file has extension “.sage” is used by the SAGE
+Server to load the Agents and their Behaviors on the connected Nodes.</p>
+<ul>
+<li><p>This is the file that the user sees when loading or saving an
+Agent Network from the App. It will always be accompanied by
+the companion “.sagenode” file used by the Node Manager to
+start the Nodes.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Saving an Agent Network</strong></p>
+<p>The current Agent network configuration can be saved (exported) when the
+Server is active.</p>
+<p>To save an Agent network:</p>
+<ol class="arabic simple">
+<li><p>Click the Save Network button on the Control Toolstrip.</p></li>
+<li><p>Navigate to the desired folder for saving the network configuration
+files.</p></li>
+<li><p>Enter a filename for your Agent Network configuration (must have
+extension “.sage”).</p></li>
+<li><p>Click the Save button.</p></li>
+</ol>
+<p><strong>Loading an Agent Network</strong></p>
+<p>A previously saved network configuration can be loaded (imported) when
+the Server is inactive.</p>
+<p>To load an Agent network:</p>
+<ol class="arabic simple">
+<li><p>Click the Load Network button on the Control Toolstrip.</p></li>
+<li><p>Navigate to the folder containing the previously saved network
+configuration files and select the Agent Network file (with extension
+“.sage”).</p></li>
+<li><p>Click the Open button.</p></li>
+</ol>
+<p>The SAGE Server will start and the Node Manager will attempt to start
+any missing Nodes. The Server will then perform a validation check on
+the JSON tree by ensuring that all Nodes referenced in the network exist
+and that all Behaviors to be added to the Agents exists in the Behavior
+repository.</p>
+<p>If there are any errors (e.g., missing Nodes or Behaviors), an “Agent
+Network Load Errors” dialog window will appear listing the errors.</p>
+<p>The dialog window remains open while the user attempts to resolve the
+issues.</p>
+<a class="reference internal image-reference" href="_images/image33.png"><img alt="_images/image33.png" src="_images/image33.png" style="width: 6.5in; height: 5.67431in;" /></a>
+<p>In the above example, two Nodes residing on the remote Host named
+“surface-laptop” could not be started because the remote Host was
+offline. The issue is resolved by bringing “surface-laptop” back online.</p>
+<p>Click the Retry button to retry loading the network configuration, or
+click Cancel to abort the operation.</p>
+<p>If there are no more errors, the Server is able to create the Agents and
+load their Behaviors so that the saved network is fully configured.</p>
+<a class="reference internal image-reference" href="_images/image34.png"><img alt="_images/image34.png" src="_images/image34.png" style="width: 6.5in; height: 5.77917in;" /></a>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="starting_a_server_instance.html" class="btn btn-neutral float-right" title="Starting a Server Instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2024 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>
