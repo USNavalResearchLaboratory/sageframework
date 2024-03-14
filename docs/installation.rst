@@ -11,7 +11,7 @@ Note that SAGE may be compatible with other versions of Windows and Linux distri
 
 - Windows 10, 11, Server 2016
 - Red Hat Enterprise Linux 8
-- Ubuntu 20
+- Ubuntu 22
 
 
 Optional for development
