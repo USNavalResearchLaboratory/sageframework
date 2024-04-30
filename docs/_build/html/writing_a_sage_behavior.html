@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing a SAGE Behavior &mdash; SAGE User Guide v3.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=536c50fe" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=30f05f40" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=47f26a0a"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/custom.js?v=4441fbbd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Base Class - SAGE Behavior Methods" href="base_class_methods.html" />
+    <link rel="prev" title="Building an Agent Network" href="building_an_agent_network.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SAGE User Guide
+          </a>
+              <div class="version">
+                3.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html"><strong>SAGE Server Application</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#main-window"><strong>Main Window</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#server-settings"><strong>Server Settings</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#network-tree-view"><strong>Network Tree View</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#network-graph-view"><strong>Network Graph View</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#starting-the-server"><strong>Starting the Server</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#active-server"><strong>Active Server</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-node-manager"><strong>The Node Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-behavior-manager"><strong>The Behavior Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#adding-a-behavior-to-an-agent"><strong>Adding a Behavior to an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#viewing-behavior-properties"><strong>Viewing Behavior Properties</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#removing-a-behavior-from-an-agent"><strong>Removing a Behavior from an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#activating-an-agent"><strong>Activating an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#deactivating-an-agent"><strong>Deactivating an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#sending-a-message"><strong>Sending a Message</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#sending-files-to-a-node"><strong>Sending Files to a Node</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#viewing-agent-state-spaces"><strong>Viewing Agent State Spaces</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-sage-robot-interface"><strong>The SAGE Robot Interface</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-log-viewer"><strong>The Log Viewer</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#loading-and-saving-an-agent-network"><strong>Loading and Saving an Agent Network</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Creating Behaviors</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing a SAGE Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-from-the-base-class">Inheritance from the base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#result-object">Result object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#behavior-constructor">Behavior constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#behavior-setup">Behavior setUp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#behavior-action">Behavior action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#behavior-message">Behavior message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#behavior-teardown">Behavior tearDown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-header-file">C++ header file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-behavior-file">Example Behavior file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packaged-behaviors">Packaged Behaviors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Managing Behaviors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Starting Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Writing a SAGE Behavior</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/writing_a_sage_behavior.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="writing-a-sage-behavior">
+<h1>Writing a SAGE Behavior<a class="headerlink" href="#writing-a-sage-behavior" title="Link to this heading"></a></h1>
+<p>SAGE Behaviors are classes that are be developed, outside of the main SAGE codebase, and ran by SAGE Agents. An example Behavior might be a Python module that when invoked uses a Java package to test an external application and make the test results available to the SAGE Server.</p>
+<p>Behaviors can be written so that agents can perform either <strong>reactively in response to an incoming message</strong>, or <strong>proactively on a continuous or one time basis.</strong></p>
+<p>Behavior objects must contain four methods that constitute their execution repertoire:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">setUp</span></code> This method is called when a Behavior is instantiated and is expected to perform initialization activities. Behaviors are instantiated when an Agent becomes active, or when a new Behavior is added to an active Agent.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">action</span></code> This method implements the proactive execution of a Behavior based on the execution mode specified.</dt><dd><ul>
+<li><p>OneShot execution activates the <code class="docutils literal notranslate"><span class="pre">action</span></code> method once when the Agent is activated.</p></li>
+<li><p>Periodic execution activates the <code class="docutils literal notranslate"><span class="pre">action</span></code> method continuously.</p></li>
+<li><p>TimedPeriodic execution activates the <code class="docutils literal notranslate"><span class="pre">action</span></code> method every <em>n</em> milliseconds.</p></li>
+<li><p>OnMessage activates the <code class="docutils literal notranslate"><span class="pre">action</span></code> method upon the receipt of a specific message.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> This method is called when an Agent receives a message. Behaviors can specify a topic filter consisting of a list of topics that the Behavior is interested in. Incoming messages that do not specify one of those topics in the topic filter are not propagated to the Behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tearDown</span></code> This method is called on each Behavior when an Agent is deactivated. It is expected to perform any de-initialization activities necessary to bring the system to a known state.</p></li>
+</ul>
+<p>Each method can populate a Result object that includes the result of the execution as well as a log of the activities performed during the execution. Result objects that specify an execution result other than <code class="docutils literal notranslate"><span class="pre">NotSet</span></code> (see below) are passed back to the Server.</p>
+<p>Behaviors are run by (within) a SAGE Node process. When a Behavior is added to an <a class="reference internal" href="sage_node.html#agent-label"><span class="std std-ref">SAGE Agent</span></a>, its executable module is sent to the Node containing the Agent so that it can be scheduled for execution by that Node.</p>
+<section id="inheritance-from-the-base-class">
+<h2>Inheritance from the base class<a class="headerlink" href="#inheritance-from-the-base-class" title="Link to this heading"></a></h2>
+<p>Behaviors can be written in C++, Java, or Python. In each language a SAGE Behavior is a class and is required to conform to a specific interface. This includes inheriting from a base class and using specific objects provided by the SAGE Framework. To develop C++ Behaviors you will need to install the SAGE SDK. Behaviors developed in Java or Python do not require the SAGE SDK.</p>
+<p>Every C++ Behavior class, in this example named “ExampleCppBehavior”, is a subclass (child) of NativePluginInterface. The NativePluginInterface header file is available in the SAGE SDK.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ExampleCppBehavior</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">NativePluginInterface</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Java every Behavior is a subclass of SageBehavior. The Java SageBehavior class code is in the SageJavaBehaviorInterface.jar file distributed with the SAGE Node installer. The Java source files are distributed in the SAGE SDK.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleJavaBehavior</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SageBehavior</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Python every Behavior is a subclass of SageBehavior. The Python SageBehavior code is in the file SagePythonBehaviorInterface-1.0-py2.7.egg which is distributed with the SAGE Node and SAGE Server installers. The code itself is distributed in the SAGE SDK.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExamplePythonBehavior</span><span class="p">(</span><span class="n">SageBehavior</span><span class="o">.</span><span class="n">SageBehavior</span><span class="p">):</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="result-object">
+<h2>Result object<a class="headerlink" href="#result-object" title="Link to this heading"></a></h2>
+<p>A Result object provides a reporting mechanism back to the Server to indicate the results of the execution of a Behavior’s <code class="xref py py-mod docutils literal notranslate"><span class="pre">setup()</span></code>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">action()</span></code>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">message()</span></code>, or <code class="xref py py-mod docutils literal notranslate"><span class="pre">teardown()</span></code> methods.</p>
+<p>A Result object contains the following three members that should be assigned appropriate values by the Behavior developer:</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_logMessages</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_exception</span><span class="p">;</span>
+<span class="n">ExecutionResultType</span><span class="w"> </span><span class="n">m_executionResult</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_logMessages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="w"> </span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">m_logMessages</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSuccess</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>m_logMessages</strong> is a vector of strings and is intended to provide a log of events that occurred during the execution of a Behavior.</p></li>
+<li><p><strong>m_exception</strong> if the execution of code in the method generates an exception, the m_exception string should contain text describing the cause of the exception.</p></li>
+<li><dl class="simple">
+<dt><strong>m_executionResult</strong> this member consists of an enumeration of type ExecutionResultType. It can have one of three values:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">CompletionSuccess</span></code> - the method completed execution successfully</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CompletionFailure</span></code> - the method completed execution but failed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExceptionThrown</span></code> - code in the method caused an exception to be thrown. It is highly recommended that Behavior developers execute any code that can potentially generate exceptions within a try - catch statement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NotSet</span></code> - the method has not yet assigned m_executionResult a value.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="behavior-constructor">
+<h2>Behavior constructor<a class="headerlink" href="#behavior-constructor" title="Link to this heading"></a></h2>
+<p>It is a requirement for SAGE Behaviors that their <strong>constructors only set member variables</strong>. There should be no significant code executed in a Behavior constructor. This is because the SAGE Framework may instantiate and destroy Behaviors when doing inquiry functionality.  Any startup related code should be put in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">setUp()</span></code> method.</p>
+<p>Behaviors in all three languages have the same members declared in the base class.</p>
+<p>There are six members:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>m_name</strong> [a string]</dt><dd><p>This is the Behavior’s name.
+Other parts of the SAGE system depend on this name (and the Behavior’s filename) to find and execute the Behavior.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_description</strong> [a string]</dt><dd><p>A description of the Behavior.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_executionType</strong></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">OneShot</span></code>, <code class="docutils literal notranslate"><span class="pre">Cyclical</span></code>, <code class="docutils literal notranslate"><span class="pre">TimedCyclical</span></code>, <code class="docutils literal notranslate"><span class="pre">OnMessage</span></code>, or <code class="docutils literal notranslate"><span class="pre">NoExecution</span></code>.
+These values all pertain to when the Behavior’s action() method will be invoked.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">OneShot</span></code> action() is called once when the Agent is activated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Cyclical</span></code> action() is called continuously after the Agent is activated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TimedCyclical</span></code> action() is called continuously every m_period milliseconds after the Agent is activated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OnMessage</span></code> action() is called upon the receipt of a message that matches m_triggerMessage. Do not confuse this with the Behavior’s message() method.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NoExecution</span></code> action() is not called.  The Behavior is still created, setUp() is invoked, and the Behavior can be used via the message() method.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_triggerMessage</strong> [a string]</dt><dd><p>If the Behavior’s <strong>m_executionType</strong> is <code class="docutils literal notranslate"><span class="pre">OnMessage</span></code> then action() will be invoked when a message is sent from elsewhere in the SAGE system that matches the string <strong>m_triggerMessage</strong>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_period</strong> [time in in milliseconds]</dt><dd><p>If the <strong>m_executionType</strong> is <code class="docutils literal notranslate"><span class="pre">TimedCyclical</span></code> then the action() method will be called every <strong>m_period</strong> milliseconds.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_delay</strong> [time in in milliseconds]</dt><dd><p>This is the initial amount of time the Behavior’s Agent will wait before calling the Behavior’s action().
+A Behavior is instantiated when its Agent is activated or when a Behavior is added to an active Agent. At that time the Behavior’s setUp() method is also called. If the Behavior has defined an <strong>m_executionType</strong> of <code class="docutils literal notranslate"><span class="pre">OneShot</span></code>, <code class="docutils literal notranslate"><span class="pre">Cyclical</span></code>, or <code class="docutils literal notranslate"><span class="pre">TimedCyclical</span></code> then the action() will first be called after <strong>m_delay</strong> milliseconds have passed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>In C++, SAGE enforces this requirement by requiring that a Behavior’s constructor be created using a macro <strong>SAGE_BEHAVIOR</strong> (defined in NativePluginInterface.h).  Use of this macro also allows a SAGE Server running on Windows to inspect an .so file created under Linux.</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SAGE_BEHAVIOR</span><span class="p">(</span><span class="n">CLASS_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">BEHAVIOR_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">BEHAVIOR_DESCRIPTION</span><span class="p">,</span><span class="w"> </span><span class="n">EXECUTION_TYPE</span><span class="p">,</span><span class="w"> </span><span class="n">TRIGGER_MESSAGE</span><span class="p">,</span><span class="w"> </span><span class="n">PERIOD</span><span class="p">,</span><span class="w"> </span><span class="n">DELAY</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The first parameter should be the name of the class.  The remaining map to each of the six members.</p>
+<p>In Java and Python, the members should be set in the constructor.</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">ExampleJavaBehavior</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="n">m_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SimpleExample&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Simple description&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_executionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionType</span><span class="p">.</span><span class="na">OneShot</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_triggerMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_period</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="nb">super</span><span class="p">(</span><span class="n">ExamplePythonBehavior</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_name</span> <span class="o">=</span> <span class="s2">&quot;SimpleExample&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_description</span> <span class="o">=</span> <span class="s2">&quot;Simple description&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_executionType</span> <span class="o">=</span> <span class="n">ExecutionType</span><span class="o">.</span><span class="n">ExecutionType</span><span class="o">.</span><span class="n">OneShot</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_triggerMessage</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_period</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_delay</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="behavior-setup">
+<h2>Behavior setUp<a class="headerlink" href="#behavior-setup" title="Link to this heading"></a></h2>
+<p>This method is called when a Behavior is instantiated and is expected to perform initialization activities. Behaviors are instantiated when an Agent becomes active, or when a new Behavior is added to an active Agent.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>result</strong> [Result object]</dt><dd><p>Results of this method’s execution should be reported using Result object. Result objects contain m_logMessages, m_exception, or m_executionResult.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>It returns true or false; false indicates that there is a SAGE Behavior internal error meaning this Behavior should not be run again.</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">ExampleCppBehavior::setUp</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message string3.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">NotSet</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message string3.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">NotSet</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message string3.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;Nothing exceptional here.&quot;</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">NotSet</span>
+                <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="behavior-action">
+<h2>Behavior action<a class="headerlink" href="#behavior-action" title="Link to this heading"></a></h2>
+<p>This method is called based on the execution type (m_executionType) specified in the Behavior constructor. Execution types include, <code class="xref py py-mod docutils literal notranslate"><span class="pre">OneShot</span></code>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">Cyclical</span></code>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">TimedCyclical</span></code>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">OnMessage</span></code>, or <code class="xref py py-mod docutils literal notranslate"><span class="pre">NoExecution</span></code>. This is method is a proactive response.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>result</strong> [Result object]</dt><dd><p>Results of this method’s execution should be reported using Result object. Result objects contain m_logMessages, m_exception, or m_executionResult.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>It returns true or false; false indicates that there is a SAGE Behavior internal error meaning this Behavior should not be run again.</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">ExampleCppBehavior::action</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message string.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">CompletionSuccess</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message string.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message string.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;Nothing exceptional here.&quot;</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSuccess</span>
+                <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="behavior-message">
+<h2>Behavior message<a class="headerlink" href="#behavior-message" title="Link to this heading"></a></h2>
+<p>This method is called when an Agent receives a message. This is method is a reactive response. Elsewhere is the SAGE system Behaviors are specified to have a topic filter consisting of a list of topics that the Behavior is interested in.</p>
+<p>Incoming messages that do not specify one of those topics in the topic filter are not propagated to the Behavior.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Message</strong> [Message object]</dt><dd><p>Provides the necessary mechanism to retrieve the message content sent to the message recipient. Messages may contain m_targetNodeName, m_targetAgentName, m_topic, m_message, and m_data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>result</strong> [Result object]</dt><dd><p>Results of this method’s execution should be reported using Result object. Result objects contain m_logMessages, m_exception, or m_executionResult.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>It returns true or false; false indicates that there is a SAGE Behavior internal error meaning this Behavior should not be run again.</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">ExampleCppBehavior::message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Got message  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_message</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; on topic &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_topic</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;len of m_data is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message from message string1.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">CompletionSuccess</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">message</span><span class="p">(</span><span class="n">Message</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Got message &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; on topic &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_topic</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;length of m_data is&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_data</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message from message string1.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Got message &quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">m_message</span><span class="p">,</span> <span class="s2">&quot; on topic &quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">m_topic</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of m_data is&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">m_data</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message from message string1.&quot;</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;Nothing exceptional here.&quot;</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSuccess</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="behavior-teardown">
+<h2>Behavior tearDown<a class="headerlink" href="#behavior-teardown" title="Link to this heading"></a></h2>
+<p>This method is called when the Agent is deactivated.  It should perform any clean-up and shutdown activities.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>result</strong> [Result object]</dt><dd><p>Results of this method’s execution should be reported using Result object. Result objects contain m_logMessages, m_exception, or m_executionResult.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>It returns true or false; false indicates that there is a SAGE Behavior internal error meaning this Behavior should not be run again.</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">ExampleCppBehavior::tearDown</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message string3.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">NotSet</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message string3.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">NotSet</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message string3.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;Nothing exceptional here.&quot;</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">NotSet</span>
+                <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="c-header-file">
+<h2>C++ header file<a class="headerlink" href="#c-header-file" title="Link to this heading"></a></h2>
+<p>C++ requires a header file. In addition to providing declarations of the required four methods, the header file must include a line required by the Boost Dll library that SAGE uses to manage dynamic load libraries.</p>
+<p>The static create() method is a factory method that creates instances of the behavior class.</p>
+<p>The BOOST_DLL_ALIAS statement exports that symbol so that SAGE can find it in the dynamic load library and invoke it.</p>
+<p>The use of a factory method to load the behavior class means that each C++ dll/so can only contain one behavior class. While this is a restriction, its likely a good practice to follow in general.</p>
+<p>Here is a example header file called ExampleCppBehavior.h:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NativePluginInterface.h&quot;</span>
+
+<span class="c1">// This class will be compiled into ExampleCppBehavior.dll under Windows</span>
+<span class="c1">// or ExampleCppBehavior.so under Linux.</span>
+<span class="c1">//</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExampleCppBehavior</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">NativePluginInterface</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">        </span><span class="n">ExampleCppBehavior</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Factory method</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">ExampleCppBehavior</span><span class="o">&gt;</span><span class="w"> </span><span class="n">create</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">ExampleCppBehavior</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ExampleCppBehavior</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">BOOST_DLL_ALIAS</span>
+<span class="p">(</span>
+<span class="w">        </span><span class="n">ExampleCppBehavior</span><span class="o">::</span><span class="n">create</span><span class="p">,</span><span class="w">     </span><span class="c1">// &lt;-- this function is exported with...</span>
+<span class="w">        </span><span class="n">create_plugin</span><span class="w">               </span><span class="c1">// &lt;-- ...this alias name</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-behavior-file">
+<h2>Example Behavior file<a class="headerlink" href="#example-behavior-file" title="Link to this heading"></a></h2>
+<p>This is an example Behavior in its entirety.  Other parts of the SAGE system would refer to this as the Behavior named ExampleBehavior.  This Behavior does not do anything useful, but it defines each of the four required methods, will print out when each is called, and fills in the result parameter.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// -------------------------------  Header file  -------------------------------</span>
+<span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NativePluginInterface.h&quot;</span>
+
+<span class="c1">// This class is exported from the ExampleCppBehavior.dll</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExampleCppBehavior</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">NativePluginInterface</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">        </span><span class="n">ExampleCppBehavior</span><span class="p">();</span>
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Factory method</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">ExampleCppBehavior</span><span class="o">&gt;</span><span class="w"> </span><span class="n">create</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">ExampleCppBehavior</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ExampleCppBehavior</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">BOOST_DLL_ALIAS</span>
+<span class="p">(</span>
+<span class="w">        </span><span class="n">ExampleCppBehavior</span><span class="o">::</span><span class="n">create</span><span class="p">,</span><span class="w">     </span><span class="c1">// &lt;-- this function is exported with...</span>
+<span class="w">        </span><span class="n">create_plugin</span><span class="w">               </span><span class="c1">// &lt;-- ...this alias name</span>
+<span class="p">)</span>
+
+<span class="c1">// ----------------------------  cpp behavior file  ------------------------------</span>
+<span class="c1">// ExampleCppBehavior.cpp : Defines the exported functions for the DLL.</span>
+<span class="c1">//</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdafx.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Common.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Message.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Result.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ExampleCppBehavior.h&quot;</span>
+
+<span class="n">SAGE_BEHAVIOR</span><span class="p">(</span><span class="n">ExampleCppBehavior</span><span class="p">,</span><span class="w"> </span><span class="n">SimpleExample</span><span class="p">,</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="n">cool</span><span class="p">,</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionType</span><span class="o">::</span><span class="n">OneShot</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">ExampleCppBehavior</span><span class="o">::</span><span class="n">setUp</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Setting up behavior&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">CompletionSuccess</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">ExampleCppBehavior</span><span class="o">::</span><span class="n">action</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World from Action&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message string1.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message string2.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message string3.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">CompletionSuccess</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">ExampleCppBehavior</span><span class="o">::</span><span class="n">message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Got message  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_message</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; on topic &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_topic</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;len of m_data is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">m_data</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Data[&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;] = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">message</span><span class="p">.</span><span class="n">m_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_logMessages</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;This is log message from message string1.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">CompletionSuccess</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">ExampleCppBehavior</span><span class="o">::</span><span class="n">tearDown</span><span class="p">(</span><span class="n">sageframework</span><span class="o">::</span><span class="n">Result</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Tearing down behavior &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">ExecutionResultType</span><span class="o">::</span><span class="n">CompletionSuccess</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Example SAGE Behavior in Java.</span>
+<span class="cm">        Shows the four methods that have to be defined:</span>
+<span class="cm">        setUp, action, message, tearDown</span>
+
+<span class="cm">         Use the following command line to build:</span>
+<span class="cm">                javac -cp &quot;%SAGE_SERVER_HOME%&quot;\SageJavaBehaviorInterface.jar ExampleJavaBehavior.java</span>
+
+<span class="cm">         Create jar file</span>
+<span class="cm">                jar cf ExampleJavaBehavior.jar ExampleJavaBehavior.class</span>
+<span class="cm">*/</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">nrl.sage.BehaviorInterface.*</span><span class="p">;</span>
+
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleJavaBehavior</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SageBehavior</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">ExampleJavaBehavior</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="n">m_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SimpleExample&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Simple behavior that prints a lot&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_executionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionType</span><span class="p">.</span><span class="na">OneShot</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15000</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="cm">/* The class needs a setUp. Return True or False */</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">().</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Setting up behavior %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m_name</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="cm">/* The class needs an action fill in result. Return True or False */</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World from Action&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message string1.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message string2.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message string3.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">message</span><span class="p">(</span><span class="n">Message</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="cm">/* The class needs a message message method. It is passed in a message object. Return True or False */</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Got message &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; on topic &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_topic</span><span class="p">);</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;length of m_data is&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_data</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">message</span><span class="p">.</span><span class="na">m_data</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Data[&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;] = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">m_data</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_logMessages</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;This is log message from message string1.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nothing exceptional here.&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="cm">/* The class needs a tearDown. Return True or False */</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">().</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Tearing down behavior %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m_name</span><span class="p">);</span>
+<span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Python</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="c1"># Example SAGE Behavior in Python.</span>
+<span class="c1"># Shows the four methods that have to be defined:</span>
+<span class="c1"># setUp, action, message, tearDown</span>
+<span class="c1">#</span>
+
+<span class="kn">from</span> <span class="nn">nrl.sage.BehaviorInterface</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="k">class</span> <span class="nc">ExamplePythonBehavior</span><span class="p">(</span><span class="n">SageBehavior</span><span class="o">.</span><span class="n">SageBehavior</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; This is a simple SAGE Behavior &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="nb">super</span><span class="p">(</span><span class="n">ExamplePythonBehavior</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_name</span> <span class="o">=</span> <span class="s2">&quot;SimpleExample&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_description</span> <span class="o">=</span> <span class="s2">&quot;Simple behavior that prints a lot.&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_executionType</span> <span class="o">=</span> <span class="n">ExecutionType</span><span class="o">.</span><span class="n">ExecutionType</span><span class="o">.</span><span class="n">OneShot</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m_delay</span> <span class="o">=</span> <span class="mi">15000</span>
+
+        <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot; The class needs a  setUp.  Return True or False &quot;&quot;&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setting up behavior &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">m_name</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSucces</span>
+
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">def</span> <span class="nf">action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot; The class needs an  action  fill in  result.  Return True or False &quot;&quot;&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World from Action&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message string1.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message string2.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message string3.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;Nothing exceptional here.&quot;</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSuccess</span>
+
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot; The class needs a  message method. It is passed in a message object. Return True or False &quot;&quot;&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Got message &quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">m_message</span><span class="p">,</span> <span class="s2">&quot; on topic &quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">m_topic</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of m_data is&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">m_data</span><span class="p">)</span> <span class="p">)</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">m_data</span><span class="p">):</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data[&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;] = &quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">m_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
+                        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_logMessages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;This is log message from message string1.&quot;</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_exception</span> <span class="o">=</span> <span class="s2">&quot;Nothing exceptional here.&quot;</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSuccess</span>
+
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot; The class needs a  tearDown. Return True or False &quot;&quot;&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tearing down behavior &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">m_name</span><span class="p">)</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">m_executionResult</span> <span class="o">=</span> <span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">ExecutionResultType</span><span class="o">.</span><span class="n">CompletionSuccess</span>
+
+                <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="packaged-behaviors">
+<h2>Packaged Behaviors<a class="headerlink" href="#packaged-behaviors" title="Link to this heading"></a></h2>
+<p>SAGE Behaviors <strong>MUST</strong> be packaged into .JAR or .WHL files for Java and Python behaviors respectively. C++ behaviors are packaged as .DLL or .SO modules depending on the target platform.</p>
+<p>Note that there can only be one SAGE Behavior per package.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="building_an_agent_network.html" class="btn btn-neutral float-left" title="Building an Agent Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="base_class_methods.html" class="btn btn-neutral float-right" title="Base Class - SAGE Behavior Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2024 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>

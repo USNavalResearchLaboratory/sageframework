@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; SAGE User Guide v3.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=536c50fe" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=30f05f40" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=47f26a0a"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/custom.js?v=4441fbbd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SAGE Server Application" href="sage_app.html" />
+    <link rel="prev" title="How It Works" href="how_it_works.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SAGE User Guide
+          </a>
+              <div class="version">
+                3.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#optional-for-development">Optional for development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-the-sage-server-or-node-installer-executable">1. Start the SAGE Server or Node Installer executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#review-the-sage-license-agreement">2. Review the SAGE license agreement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-your-installation-folder">3. Select your installation folder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confirm-sage-installation">4. Confirm SAGE installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-complete">5. Installation complete</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-on-linux">Installation on Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html"><strong>SAGE Server Application</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#main-window"><strong>Main Window</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#server-settings"><strong>Server Settings</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#network-tree-view"><strong>Network Tree View</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#network-graph-view"><strong>Network Graph View</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#starting-the-server"><strong>Starting the Server</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#active-server"><strong>Active Server</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-node-manager"><strong>The Node Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-behavior-manager"><strong>The Behavior Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#adding-a-behavior-to-an-agent"><strong>Adding a Behavior to an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#viewing-behavior-properties"><strong>Viewing Behavior Properties</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#removing-a-behavior-from-an-agent"><strong>Removing a Behavior from an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#activating-an-agent"><strong>Activating an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#deactivating-an-agent"><strong>Deactivating an Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#sending-a-message"><strong>Sending a Message</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#sending-files-to-a-node"><strong>Sending Files to a Node</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#viewing-agent-state-spaces"><strong>Viewing Agent State Spaces</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-sage-robot-interface"><strong>The SAGE Robot Interface</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#the-log-viewer"><strong>The Log Viewer</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html#loading-and-saving-an-agent-network"><strong>Loading and Saving an Agent Network</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Creating Behaviors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Managing Behaviors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Starting Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<section id="requirements">
+<span id="requirements-label"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<p>Note that SAGE may be compatible with other versions of Windows and Linux distributions not listed below</p>
+<ul class="simple">
+<li><p>Windows 10, 11, Server 2016</p></li>
+<li><p>Red Hat Enterprise Linux 8</p></li>
+<li><p>Ubuntu 18</p></li>
+</ul>
+<section id="optional-for-development">
+<h3>Optional for development<a class="headerlink" href="#optional-for-development" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python</a> 3.10</p></li>
+<li><p><a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK</a> 11 and up.</p></li>
+</ul>
+</section>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h2>
+<section id="start-the-sage-server-or-node-installer-executable">
+<h3>1. Start the SAGE Server or Node Installer executable<a class="headerlink" href="#start-the-sage-server-or-node-installer-executable" title="Link to this heading"></a></h3>
+<p>SAGE Server and Node softwares are packaged independently and include separate installers.</p>
+<p>After the SAGE distribution has finished downloading it should be available in your download directory. Start the SAGE Server or SAGE Node Installer executable. You may be asked to install Visuall C++ Runtime. If so, select ‘OK’ and proceeed. Select repair if needed.</p>
+<figure class="align-default">
+<img alt="_images/visual_c_install.png" src="_images/visual_c_install.png" />
+</figure>
+<p>Select the ‘Next’ button to continue with installing SAGE.</p>
+<figure class="align-default">
+<img alt="_images/setup_begin.png" src="_images/setup_begin.png" />
+</figure>
+</section>
+<section id="review-the-sage-license-agreement">
+<h3>2. Review the SAGE license agreement<a class="headerlink" href="#review-the-sage-license-agreement" title="Link to this heading"></a></h3>
+<p>Review the terms of agreement. To proceed, agree to the terms of the license agreement.</p>
+<p>Select the ‘Next’ button to continue.</p>
+<figure class="align-default">
+<img alt="_images/setup_license.PNG" src="_images/setup_license.PNG" />
+</figure>
+</section>
+<section id="select-your-installation-folder">
+<h3>3. Select your installation folder<a class="headerlink" href="#select-your-installation-folder" title="Link to this heading"></a></h3>
+<p>Specify the folder where you want SAGE to be installed. The default folder will be in your Program Files directory.</p>
+<p>Select the ‘Next’ button to continue.</p>
+<figure class="align-default">
+<img alt="_images/setup_filePath.png" src="_images/setup_filePath.png" />
+</figure>
+</section>
+<section id="confirm-sage-installation">
+<h3>4. Confirm SAGE installation<a class="headerlink" href="#confirm-sage-installation" title="Link to this heading"></a></h3>
+<p>Select the ‘Next’ button to begin the installation. You may get a security warning to run this file. Select ‘Yes’ to allow SAGE to proceed with installation.</p>
+<figure class="align-default">
+<img alt="_images/setup_ready.png" src="_images/setup_ready.png" />
+</figure>
+</section>
+<section id="installation-complete">
+<h3>5. Installation complete<a class="headerlink" href="#installation-complete" title="Link to this heading"></a></h3>
+<p>Once the installation is complete you can now launch SAGE.</p>
+<figure class="align-default">
+<img alt="_images/setup_complete.png" src="_images/setup_complete.png" />
+</figure>
+</section>
+</section>
+<section id="environment-variables">
+<span id="envvar-label"></span><h2>Environment variables<a class="headerlink" href="#environment-variables" title="Link to this heading"></a></h2>
+<p>The following System variables will be automatically added:</p>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-SAGE_SERVER_HOME">
+<span class="sig-name descname"><span class="pre">SAGE_SERVER_HOME</span></span><a class="headerlink" href="#envvar-SAGE_SERVER_HOME" title="Link to this definition"></a></dt>
+<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\Program</span><span class="c1"> Files\NRL\SageServer</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-SAGE_CLASSPATH">
+<span class="sig-name descname"><span class="pre">SAGE_CLASSPATH</span></span><a class="headerlink" href="#envvar-SAGE_CLASSPATH" title="Link to this definition"></a></dt>
+<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="nv">%SAGE_SERVER_HOME%</span>;<span class="nv">%SAGE_SERVER_HOME%</span>\robotframework-2.9.2.jar;<span class="nv">%SAGE_SERVER_HOME%</span>\SageRemoteInterface.jar;<span class="nv">%SAGE_SERVER_HOME%</span>\SageJavaBehaviorInterface.jar
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-SAGE_NODE_HOME">
+<span class="sig-name descname"><span class="pre">SAGE_NODE_HOME</span></span><a class="headerlink" href="#envvar-SAGE_NODE_HOME" title="Link to this definition"></a></dt>
+<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\Program</span><span class="c1"> Files\NRL\SageNode</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p><strong>Update your PATH System variable</strong></p>
+<p>Java installation requires access to <em>jvm.dll</em> and <em>java.exe</em>.</p>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-PATH">
+<span class="sig-name descname"><span class="pre">PATH</span></span><a class="headerlink" href="#envvar-PATH" title="Link to this definition"></a></dt>
+<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> Java JDK users: <span class="s2">&quot;C:\Program Files\Java\jdk1.8.0_xx\bin;C:\Program Files\Java\jdk1.8.0_xx\jre\bin\server&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>Python requires access to <em>python.exe</em>.</p>
+<blockquote>
+<div><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">For</span> Python users: <span class="s2">&quot;C:\Python27&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="installation-on-linux">
+<span id="linux-install"></span><h2>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Link to this heading"></a></h2>
+<p>On a terminal enter the following command, assuming the current sage distribution rpms are in the local folder:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>sudo rpm -Uvh nrl-sage-node-*.rpm
+</pre></div>
+</div>
+<p>Note that the SDK package is optional and needed only for C++ behavior development. Java and Python Behaviors can be developed without it. Note that the Linux Server is still considered to be an experimental version. To install the SDK and Server:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>sudo rpm -Uvh nrl-sage-sdk-*.rpm
+sudo rpm -Uvh nrl-sage-server-*.rpm
+</pre></div>
+</div>
+<p>If you’re on a Debian based Linux that does not have rpm, such as Ubuntu, you can install the alien package. Then the above rpm commands will work.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>sudo apt-get install alien
+</pre></div>
+</div>
+<p><strong>Environment variables</strong></p>
+<p>SAGE Node needs the Java JVM dynamic library to be in the runtime library search path. This is accomplished by including its location in the <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> environment variable. This is typically done by including the definition in .bashrc file or .profile file.</p>
+<p>It can also be temporarily set using the same command, typically:</p>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-LD_LIBRARY_PATH">
+<span class="sig-name descname"><span class="pre">LD_LIBRARY_PATH</span></span><a class="headerlink" href="#envvar-LD_LIBRARY_PATH" title="Link to this definition"></a></dt>
+<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:{JRE_HOME}/lib/amd64/server
+</pre></div>
+</div>
+</dd></dl>
+
+<p>If you intend to use the Robot Framework on Linux with the SAGE Server you will need to define the <code class="docutils literal notranslate"><span class="pre">SAGE_ROBOT_LIBRARY</span></code> environment variable.</p>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-SAGE_ROBOT_LIBRARY">
+<span class="sig-name descname"><span class="pre">SAGE_ROBOT_LIBRARY</span></span><a class="headerlink" href="#envvar-SAGE_ROBOT_LIBRARY" title="Link to this definition"></a></dt>
+<dd><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>export SAGE_ROBOT_LIBRARY=SageRemoteInterface
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="how_it_works.html" class="btn btn-neutral float-left" title="How It Works" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sage_app.html" class="btn btn-neutral float-right" title="SAGE Server Application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2024 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>

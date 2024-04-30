@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Running Your Automation Test &mdash; SAGE User Guide v3.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=536c50fe" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=30f05f40" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=47f26a0a"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/custom.js?v=4441fbbd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Capturing the Test Results" href="capturing_the_test_results.html" />
+    <link rel="prev" title="SAGE Robot Framework Keywords" href="sage_robot_framework_keywords.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SAGE User Guide
+          </a>
+              <div class="version">
+                3.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Creating Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Managing Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Starting Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Tests</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Running Your Automation Test</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/running_your_automation_test.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="running-your-automation-test">
+<h1>Running Your Automation Test<a class="headerlink" href="#running-your-automation-test" title="Link to this heading"></a></h1>
+<p>You are ready to execute your test once you have constructed your Robot file with the proper SAGE Keywords.</p>
+<p>All test cases are ran at the <strong>Server level</strong>.</p>
+<p>The Server will communicate with each connected Node, whether local or remote. This allows you to store all your test cases in a single location while testing across multiple network connected machines.</p>
+<p><strong>Execute a robot file using the command-line</strong></p>
+<blockquote>
+<div><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>java -cp <span class="s2">&quot;</span><span class="nv">%SAGE_CLASSPATH%</span><span class="s2">&quot;</span> org.robotframework.RobotFramework path/to/my_tests/Hello.robot
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Execute a robot file using the SAGE App</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>In the SAGE App click the <code class="xref py py-mod docutils literal notranslate"><span class="pre">Robot</span> <span class="pre">Interface</span></code> button.</p></li>
+<li><p>Click the <code class="xref py py-mod docutils literal notranslate"><span class="pre">Add</span></code> button.</p></li>
+<li><p>Using the finder, select your Robot file.</p></li>
+<li><p>Once your Robot file has been added to the list, click the <code class="xref py py-mod docutils literal notranslate"><span class="pre">Start</span></code> button.</p></li>
+</ol>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sage_robot_framework_keywords.html" class="btn btn-neutral float-left" title="SAGE Robot Framework Keywords" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="capturing_the_test_results.html" class="btn btn-neutral float-right" title="Capturing the Test Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2024 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>

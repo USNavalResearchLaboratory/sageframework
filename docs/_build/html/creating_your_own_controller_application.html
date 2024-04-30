@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating Your Own Controller Application &mdash; SAGE User Guide v3.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=536c50fe" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=30f05f40" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=47f26a0a"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/custom.js?v=4441fbbd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example" href="example.html" />
+    <link rel="prev" title="Capturing the Test Results" href="capturing_the_test_results.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SAGE User Guide
+          </a>
+              <div class="version">
+                3.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Creating Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Managing Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Starting Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Tests</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="robot_framework_background.html">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Your Own Controller Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#addbehavior">addBehavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect">connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clearexecutionresults">clearExecutionResults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createagent">createAgent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disconnect">disconnect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getagentnames">getAgentNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getexecutionresults">getExecutionResults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getnodenames">getNodeNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sendfile">sendFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sendmessage">sendMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setagentactive">setAgentActive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removeagent">removeAgent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removebehavior">removeBehavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waitforresult">waitForResult</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Creating Your Own Controller Application</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/creating_your_own_controller_application.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-your-own-controller-application">
+<h1>Creating Your Own Controller Application<a class="headerlink" href="#creating-your-own-controller-application" title="Link to this heading"></a></h1>
+<p>A Controller in the SAGE framework is an application that interacts with the SAGE Server to create and manage a network of Agents. SAGE Controller applications
+are external applications that remotely connect to an instance of a SAGE Server running in either a console application (ex. SageServerConsole_x64.exe) or
+in the SageServerApplication.</p>
+<p>The SAGE SDK provides both C++ and Java bindings for creating Controller applications. The SageRemoteInterface class provides an interface for creating
+a remote connection to an instance of the SAGE Server and for creating and managing agents.</p>
+<p>Using the SageRemoteInterface to create and manage an Agent network, a Control application performs the following steps:</p>
+<ol class="arabic simple">
+<li><p>Create an instance of the SageRemoteInterface class.</p></li>
+<li><p>Connect to the SAGE Server by providing an IP address and port number.</p></li>
+<li><p>Create and manage the Agent network.</p></li>
+<li><p>Synchronize events.</p></li>
+<li><p>Retrieve results.</p></li>
+<li><p>Disconnect from the SAGE server.</p></li>
+<li><p>Destroy the SageRemoteInterface object.</p></li>
+</ol>
+<p>The SageRemoteInterface class provides a number of methods to interface with Controller applications.</p>
+<section id="addbehavior">
+<h2>addBehavior<a class="headerlink" href="#addbehavior" title="Link to this heading"></a></h2>
+<p>This method adds a new Behavior to a SAGE Agent. Behaviors are units of execution that define how an Agent acts either due to a deterministic execution pattern, or in response to an incoming message. This method allows the caller to specify an optional set of topics that act as a message filter for the Agent. If a topic set is specified for a Behavior, then only incoming messages that specify one of those topics will be passed through to that Behavior. If no topic set is specified, then all messages are passed to the Behavior. This method returns a boolean value indicating whether or not the Behavior was successfully added.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of the SAGE Node in which the Agent resides.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentName</strong> [string]</dt><dd><p>This is the name of the Agent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>behaviorName</strong> [string]</dt><dd><p>This is the name that was assigned to the SAGE Behavior by its developer.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>module</strong> [string]</dt><dd><p>This is the file name of the module containing the Behavior to be added. Depending on the language the Behavior was written in, this could be a Java .class file, a Python .py file, or a native dynamic load library (.dll or .so).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>topics</strong> [string vector]</dt><dd><p>The topic vector specifies the set of topic names that the new Behavior will be interested in. Messages sent to the Behavior’s Agent will only be routed to this new Behavior if the topic specified in the message matches one of the topic names in this vector. Note that messages that do not specify a topic are sent to all Behaviors and conversely Behaviors that don’t specify a topic list receive all messages irrespective of the topic the message specifies.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">addBehavior</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">behaviorName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="k">module</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">topics</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">addBehavior</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">behaviorName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">module</span><span class="p">,</span><span class="w"> </span><span class="n">StringVector</span><span class="w"> </span><span class="n">topics</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="connect">
+<h2>connect<a class="headerlink" href="#connect" title="Link to this heading"></a></h2>
+<p>This method establishes a connection to a running SAGE Server either on the local machine or an a remote machine. It returns a boolean value indicating if the connection was
+successfully established.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>serverIPAddress</strong> [string]</dt><dd><p>This is the IP address of the machine where the SAGE Server is running.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>portNumber</strong> [integer]</dt><dd><p>This is the port number that the SAGE Server is using to accept new connection. The port number is specified when the server is started.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">serverIPAddress</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">portNumber</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">serverIPAddress</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">portNumber</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="clearexecutionresults">
+<h2>clearExecutionResults<a class="headerlink" href="#clearexecutionresults" title="Link to this heading"></a></h2>
+<p>This method clears the set of Result objects reported to the SAGE Server. Control Applications can use this method after retrieving Result objects using getExecutionResults to avoid duplicates.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">clearExecutionResults</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">clearExecutionResults</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="createagent">
+<h2>createAgent<a class="headerlink" href="#createagent" title="Link to this heading"></a></h2>
+<p>This method creates a SAGE Agent in the specified SAGE Node. The Node is identified by the name that was given when is was created. Node names must be unique across Agent networks.
+The Agent is created in an inactive state and must be activated before it will initiate any of its Behaviors. This method returns a boolean value indicating whether or not the
+Agent was created.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of the SAGE Node in which the Agent will be created.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentName</strong> [string]</dt><dd><p>This is the name that will be assigned to the new SAGE Agent. Agent names must be unique within a SAGE Node.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">createAgent</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">agentName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">createAgent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">agentName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="disconnect">
+<h2>disconnect<a class="headerlink" href="#disconnect" title="Link to this heading"></a></h2>
+<p>This method ends a connection to a running SAGE Server.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">disconnect</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">disconnect</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getagentnames">
+<h2>getAgentNames<a class="headerlink" href="#getagentnames" title="Link to this heading"></a></h2>
+<p>This method returns the names of all the SAGE Agents residing in the specified Node.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of the SAGE Node whose Agent names are to be returned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentNames</strong> [vector of strings]</dt><dd><p>This is a vector of strings containing SAGE Agent names.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">getAgentNames</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">agentNames</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">getAgentNames</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">StringVector</span><span class="w"> </span><span class="n">agentNames</span><span class="p">);</span>
+
+<span class="n">StringVector</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="kd">class</span> <span class="nc">that</span><span class="w"> </span><span class="n">provides</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">retrieving</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Agent</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">i</span><span class="p">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getexecutionresults">
+<h2>getExecutionResults<a class="headerlink" href="#getexecutionresults" title="Link to this heading"></a></h2>
+<p>This method returns all the Result objects that have been reported to the SAGE Server at the time of the call. This method does not clear the set of Result objects. Subsequent calls to this method will return the cumulative Result objects until the clearExecutionResults method is called.</p>
+<ul class="simple">
+<li><p><strong>results</strong> [vector of Result objects]</p></li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">getExecutionResults</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Result</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">results</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getExecutionResults</span><span class="p">(</span><span class="n">ResultVector</span><span class="w"> </span><span class="n">results</span><span class="p">);</span>
+
+<span class="n">ResultVector</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="kd">class</span> <span class="nc">that</span><span class="w"> </span><span class="n">provides</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">retrieving</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">i</span><span class="p">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Result class enables Behaviors to report the results of the execution of either a <code class="xref py py-mod docutils literal notranslate"><span class="pre">action()</span></code> method or a <code class="xref py py-mod docutils literal notranslate"><span class="pre">message()</span></code> method. It consists of the following members:</p>
+<ul class="simple">
+<li><p><strong>m_logMessages</strong> while the container type varies across languages, the m_logMessages member is a vector of strings and should is intended to provide a log of events that occurred during the execution of a Behavior.</p></li>
+<li><p><strong>m_exception</strong> if the execution of code in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">action()</span></code> method or a <code class="xref py py-mod docutils literal notranslate"><span class="pre">message()</span></code> methods generates an exception, the m_exception string should contain text describing the cause of the exception.</p></li>
+<li><dl class="simple">
+<dt><strong>m_executionResult</strong> this member consists of an enumeration of type ExecutionResultType. It can have one of three values:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">CompletionSuccess</span></code> - the method completed execution successfully</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CompletionFailure</span></code> - the method completed execution but failed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExceptionThrown</span></code> - code in the method caused an exception to be thrown. It is highly recommended that Behavior developers execute any code that can potentially generate exceptions withing a try - catch statement.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_logMessages</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_exception</span><span class="p">;</span>
+<span class="n">ExecutionResultType</span><span class="w"> </span><span class="n">m_executionResult</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_logMessages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">m_exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="w"> </span><span class="n">m_executionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExecutionResultType</span><span class="p">.</span><span class="na">CompletionSuccess</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getnodenames">
+<h2>getNodeNames<a class="headerlink" href="#getnodenames" title="Link to this heading"></a></h2>
+<p>This method returns the names of all SAGE Nodes connected to this SAGE Server.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeNames</strong> [vector of strings]</dt><dd><p>This is a vector of strings containing SAGE Node names.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">getNodeNames</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nodeNames</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getNodeNames</span><span class="p">(</span><span class="n">StringVector</span><span class="w"> </span><span class="n">nodeNames</span><span class="p">);</span>
+
+<span class="n">StringVector</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="kd">class</span> <span class="nc">that</span><span class="w"> </span><span class="n">provides</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">retrieving</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">i</span><span class="p">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sendfile">
+<h2>sendFile<a class="headerlink" href="#sendfile" title="Link to this heading"></a></h2>
+<p>This method transmits a file to a SAGE Node. This capability is useful for sending auxiliary data or executable library files needed by Behaviors. Files transmitted to a SAGE Node running on the Windows operating system are placed in the sage\data subfolder of the ProgramData folder (usually <code class="docutils literal notranslate"><span class="pre">C:\ProgramData\SAGE\data</span></code>). On the Linux operating system, files are placed in the <code class="docutils literal notranslate"><span class="pre">/etc/sage/data</span></code> folder.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of a SAGE Node where the file will be sent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>filePath</strong> [string]</dt><dd><p>This is a fully qualified path to the file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">sendFile</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filePath</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">sendFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">filePath</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sendmessage">
+<h2>sendMessage<a class="headerlink" href="#sendmessage" title="Link to this heading"></a></h2>
+<p>The sendMessage method enables the Control Application to send messages to Agents.</p>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">sendMessage</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sageframework</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">sendMessage</span><span class="p">(</span><span class="n">Message</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Message class provides the necessary mechanism to specify a message recipient and the message content.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>m_targetNodeName</strong> [string]</dt><dd><p>This is the name of the SAGE Node that is the recipient of this message. If left empty, the message is sent to all the Nodes in the SAGE network.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_targetAgentName</strong> [string]</dt><dd><p>This is the name of the SAGE Agent that is the recipient of this message. If left empty, the message is sent to all the Agents in the specified SAGE Node.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_topic</strong> [string]</dt><dd><p>If specified, a topic name acts to direct a message to only those Behaviors that have that topic included in their topics list. This provides a filtering mechanism so that messages are only sent to those Behaviors interested in them.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_message</strong> [string]</dt><dd><p>This is an arbitrary, application defined string that specifies what the message is.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>m_data</strong> [string vector]</dt><dd><p>This string vector allows the message sender to include an arbitrary number of data items with the message. The content of that data is application defined.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Message</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_targetNodeName</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_targetAgentName</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_topic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_message</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_data</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Message</span>
+<span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">m_targetNodeName</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">m_targetAgentName</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">m_topic</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">m_message</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="setagentactive">
+<h2>setAgentActive<a class="headerlink" href="#setagentactive" title="Link to this heading"></a></h2>
+<p>This method sets the active state of an SAGE Agent. Agents are created in an inactive state so that Agent Behaviors are not eligible for execution. This allows the Control Application to populate the Agent with Behaviors before any Behaviors execute. This method returns a boolean value indicating whether or not the Agent state was set.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of the SAGE Node in which the Agent resides.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentName</strong> [string]</dt><dd><p>This is the name of the Agent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>isActive</strong> [boolean]</dt><dd><p>This is a boolean flag specifying whether the Agent state should be active (true), or inactive (false).</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">setAgentActive</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isActive</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">setAgentActive</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isActive</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="removeagent">
+<h2>removeAgent<a class="headerlink" href="#removeagent" title="Link to this heading"></a></h2>
+<p>This method removes a SAGE Agent from the specified SAGE Node. The Node is identified by the name that was given when is was created. It is good practice for Control applications to remove any Agents they created before exiting. This method returns a boolean value indicating whether or not the Agent was removed.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of the SAGE Node in which the Agent will be removed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentName</strong> [string]</dt><dd><p>This is the name of the Agent to remove.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">removeAgent</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">agentName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">removeAgent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">agentName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="removebehavior">
+<h2>removeBehavior<a class="headerlink" href="#removebehavior" title="Link to this heading"></a></h2>
+<p>This method removes an existing Behavior from an Agent. This will cause the Behavior’s <code class="xref py py-mod docutils literal notranslate"><span class="pre">tearDown()</span></code> method to be invoked.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of a SAGE Node where the target Agent exists.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentName</strong> [string]</dt><dd><p>This is the name of the SAGE Agent that will have its Behavior removed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>behaviorName</strong> [string]</dt><dd><p>This is the name of the Behavior that will be removed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">removeBehavior</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">behaviorName</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeBehavior</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">behaviorName</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="waitforresult">
+<h2>waitForResult<a class="headerlink" href="#waitforresult" title="Link to this heading"></a></h2>
+<p>This method causes the Control Application to block until a specified Behavior executes either its <code class="xref py py-mod docutils literal notranslate"><span class="pre">action()</span></code> method or its <code class="xref py py-mod docutils literal notranslate"><span class="pre">message()</span></code> method and generates a Result object.
+This capability is useful for synchronizing the execution of the Control Application with events in the Agent network.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>nodeName</strong> [string]</dt><dd><p>This is the name of a SAGE Node where the Agent resides.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>agentName</strong> [string]</dt><dd><p>This is the name of the SAGE Agent that has the target Behavior.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>behaviorName</strong> [string]</dt><dd><p>This is the name of the Behavior that generates the Result object.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>timeOut</strong> [int]</dt><dd><p>This the maximum time, in milliseconds, that the Control Application will block waiting for the Result object.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="padding docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>C++</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">waitForResult</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">behaviorName</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeOut</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>Java</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">waitForResult</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">agentName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">behaviorName</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeOut</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="capturing_the_test_results.html" class="btn btn-neutral float-left" title="Capturing the Test Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example.html" class="btn btn-neutral float-right" title="Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2024 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>

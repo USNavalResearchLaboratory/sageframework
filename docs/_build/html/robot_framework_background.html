@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robot Framework Background &mdash; SAGE User Guide v3.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=536c50fe" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=30f05f40" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/SAGE-icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=47f26a0a"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/custom.js?v=4441fbbd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating A Test Case Using Robot Framework - Controller Application" href="creating_a_test_case_using_robot_framework.html" />
+    <link rel="prev" title="Activating Agents" href="activating_agents.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SAGE User Guide
+          </a>
+              <div class="version">
+                3.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_server.html">SAGE Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_node.html">SAGE Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/USNavalResearchLaboratory/sageframework/releases/">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_app.html">SAGE App</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building SAGE Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="starting_a_server_instance.html">Starting a Server Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting_a_node_to_the_server.html">Connecting a Node to the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_an_agent_network.html">Building an Agent Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Creating Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_sage_behavior.html">Writing a SAGE Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_class_methods.html">Base Class - SAGE Behavior Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieving_information_about_your_agent_network.html">Retrieving Information About Your Agent Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending_messages_between_agents.html">Sending Messages Between Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="responding_to_a_message_sent_to_an_agent.html">Responding to a Message Sent to an Agent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Managing Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="managing_behavior_files.html">Managing Behavior Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_behavior_to_an_agent.html">Adding a Behavior to an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_supplemental_files_in_your_automation.html">Using Supplemental Files in Your Automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Starting Network</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activating_agents.html">Activating Agents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Tests</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot Framework Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_test_case_using_robot_framework.html">Creating A Test Case Using Robot Framework - Controller Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sage_robot_framework_keywords.html">SAGE Robot Framework Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_your_automation_test.html">Running Your Automation Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capturing_the_test_results.html">Capturing the Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_your_own_controller_application.html">Creating Your Own Controller Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help and FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAGE User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Robot Framework Background</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/robot_framework_background.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="robot-framework-background">
+<h1>Robot Framework Background<a class="headerlink" href="#robot-framework-background" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://robotframework.org">“Robot Framework”</a> by Robot Framework Foundation is licensed under the <a class="reference external" href="http://apache.org/license/LICENSE-2.0">Apache License 2.0.</a></div>
+<div class="line">All information presented is derived from <a class="reference external" href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html">Robot Framework User Guide</a> .</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>Robot Framework is a generic test automation framework that uses the keyword-driven testing approach.</p>
+<p>Keyword-driven testing uses keywords (or action words) to perform a specific task.</p>
+<ul class="simple">
+<li><p>Facilitates simple to use tabular syntax to create test cases.</p></li>
+<li><p>Generates easy to read result reports as well as logs in HTML format.</p></li>
+<li><p>Independent of application and platform.</p></li>
+<li><p>Supports creation of data driven test cases.</p></li>
+<li><p>Provides tagging for categorizing and selecting test cases that are to be executed.</p></li>
+<li><p>Has built in support for variables to enable testing in different environments.</p></li>
+</ul>
+<p><strong>File extension</strong></p>
+<p>Starting from Robot Framework 2.7.6, every robot framework file is saved as a .ROBOT file extension type.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">e.g., <em>sageTest.robot</em></div>
+</div>
+</div></blockquote>
+<p><strong>Settings</strong></p>
+<p>Robot Framework test data is defined in tabular format, thus all content outside of the recognized table types is ignored.</p>
+<p>The asterisk (*) symbol is used to distinguish each table. When creating each table you can input “*”, “**”, or “<strong>***</strong>” before you add the name of the
+table. For consistency purposes it is common to use “<strong>***</strong>” before you add the table name. Be sure that the table name is spaced between the
+asterisks.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Settings ***
+</pre></div>
+</div>
+<p>Four common settings are <em>[Documentation]</em>, <em>[Library]</em>, <em>[Test Setup]</em>, and <em>[Test Teardown]</em>.</p>
+<p><strong>Documentation</strong></p>
+<p>The <em>[Documentation]</em> setting allows you specify documentation of a test case. The supporting text is shown in both the command line output, as well as the test logs and reports.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Settings ***
+Documentation    Written explanation of test case to be documented
+</pre></div>
+</div>
+<p><strong>Library</strong></p>
+<p>Importing supporting Robot Framework libraries is essential to make use of its keywords and their functionality. Test libraries may be imported using the <em>[Library]</em> setting.</p>
+<p>The library name is both case- and space-sensitive. If a library is in a package, the full name including the package name must be used.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Settings ***
+Documentation    Written explanation of test case to be documented
+
+Library    SageRobotKeywords
+</pre></div>
+</div>
+<p>The Library setting is Robot Framework’s equivalent of Java’s and Python’s respective import statement. Import SageRobotKeywords to use SAGE Framework specific keywords.</p>
+<p><strong>Test Setup</strong></p>
+<p>The <em>[Test Setup]</em> setting allows you to run a Keyword before running your test case. This is useful for setting up your environment prior to conducting your test, such as configuring your network or having the proper windows open.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Settings ***
+Documentation    Written explanation of test case to be documented
+
+Library    SageRobotKeywords
+Test Setup    Start SAGE
+</pre></div>
+</div>
+<p><strong>Test Teardown</strong></p>
+<p>The <em>[Test Teardown]</em> setting allows you to run a Keyword after your test case either completes or fails. This is useful for performing any clean-up and shutdown activities, such as deactivating your agents or closing any active windows.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Settings ***
+Documentation    Written explanation of test case to be documented
+
+Library    SageRobotKeywords
+Test Setup    Start SAGE
+Test Teardown    Deactivate Agent   MyNode   MyAgent
+</pre></div>
+</div>
+<p><strong>Test case</strong></p>
+<p>The first column in the <strong>Test Cases</strong> table contains the test case name</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Test Cases ***
+TestName
+</pre></div>
+</div>
+<p><em>“TestName”</em> is the name of the test case, while <strong>“Test Cases”</strong> is the table name.</p>
+<p>A test case concludes once a new test case or table is declared or if the current test reaches its final keyword.</p>
+<p><strong>Keywords</strong></p>
+<p>Keywords are considered as functions or methods that can be used for testing. Each keyword correspond to a set of actions.</p>
+<p>Keywords are specified in the second column. Keywords are <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">SAGE</span></code> and <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">SAGE</span> <span class="pre">Runtime</span></code>. Columns after the keyword name contain possible arguments to the specified keyword. Arguments are <strong>server_IP_address</strong> and <strong>port_number</strong>.</p>
+<p>Robot Framework recommends using <em>four spaces between columns</em>.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Test Cases ***
+TestName
+    <span class="k">Start</span> SAGE
+        Connect to SAGE Runtime    {server_IP_address}    {port_number}
+</pre></div>
+</div>
+<p><strong>Comments</strong></p>
+<p>In order to comment out a line include the pound (#) symbol.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Test Cases ***
+TestName
+    <span class="k">Start</span> SAGE
+        Connect to SAGE Runtime    {server_IP_address}    {port_number}
+        # This keyword is commented out
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<p>Keywords may accept zero or more arguments. The number of arguments a keyword accepts depends on its implementation, and typically the best place to search for this information is located in a keyword’s documentation (if supplied by the developer).</p>
+<p>If an argument has a default value you may specify that value by separating the argument name and its value with an equal sign.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>*** Test Cases ***
+TestName
+    <span class="k">Start</span> SAGE
+        Connect to SAGE Runtime    {server_IP_address}    {port_number}
+        # This keyword is commented out
+        Create Agent    nodeName=MyNode    agentName=MyAgent
+</pre></div>
+</div>
+<p><strong>Robot file runtime</strong></p>
+<p>Robot Framework is executed in these following steps:</p>
+<ol class="arabic simple">
+<li><p>Collecting test cases, reading and setting variables</p></li>
+<li><p>Running all the steps in every test case</p></li>
+<li><p>Providing the execution statistics (which test cases have passed/failed)</p></li>
+<li><p>Writing the detailed log in xml format</p></li>
+<li><p>Generating the report and log in html format.</p></li>
+</ol>
+<p>All executed test suites and test cases, as well as their statuses, are shown in real time.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="activating_agents.html" class="btn btn-neutral float-left" title="Activating Agents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="creating_a_test_case_using_robot_framework.html" class="btn btn-neutral float-right" title="Creating A Test Case Using Robot Framework - Controller Application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2024 U.S. Naval Research Laboratory, This effort is partially funded by OPNAV N94 and MARCORSYSCOM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+<script type="text/javascript">
+	function resizeIframe(obj, y){
+		obj.style.height = 0;
+		y = parseInt(y);
+		obj.style.height = (obj.contentWindow.document.body.scrollHeight + y) +  'px';
+	}
+</script>
+
+
+</body>
+</html>
