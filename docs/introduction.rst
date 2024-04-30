@@ -22,6 +22,6 @@ SAGE is simple to use and consists of four parts:
 
 	**SAGE Node** is also a console application available for both Windows and Linux. SAGE Node acts as a container for SAGE agents, managing their execution and maintining connectivity to the SAGE Server. SAGE Node is designed to be portable across a wide variety of system architectures. Multiple instances of SAGE Node can be distributed across a network of computing devices of various architectures. SAGE Framework manages the data translation between different architectures trasparently. 
 
-	**SAGE Agents** are automous agents consisting of a repitoir of Behaviors and a state. SAGE agents exist within a SAGE Node and can communicate with other agents using message passing. Agents can have any number of Behaviors each consisting of a mix of C++, Java, or Python modules. Behaviors are stored in a centeral repository on the SAGE Server and are sent to agents at runtime on demand. 
+	**SAGE Agents** are automous agents consisting of a repertoire of Behaviors and a state. SAGE agents exist within a SAGE Node and can communicate with other agents using message passing. Agents can have any number of Behaviors each consisting of a mix of C++, Java, or Python modules. Behaviors are stored in a centeral repository on the SAGE Server and are sent to agents at runtime on demand. 
 
 	**SAGE Behaviors** are objects that are derived from base classes provided with the SAGE Framework. A SAGE behavior endows an Agent with the capability to act either proactivily or reactively.
